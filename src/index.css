@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
 @import "tailwindcss";
+
+
 
 :root {
   --saver-green: #4ade80;
@@ -7,7 +12,7 @@
 @layer base {
   body {
     @apply text-gray-800;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Lato', sans-serif; /* ✅ Global font is now Lato */
   }
   
   h1, h2, h3, h4 {
