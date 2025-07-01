@@ -24,7 +24,8 @@ const Header = () => {
           className="flex items-center space-x-2"
         >
           <div className="bg-saver-green w-10 h-10 rounded-full flex items-center justify-center">
-            <span className="text-white font-bold text-lg">S</span>
+            {/* <span className="text-white font-bold text-lg">S</span> */}
+            <img src="/logo.png" alt="" />
           </div>
           <h1 className="text-xl font-bold text-saver-green">SAVER<span className="text-black">COIN</span></h1>
         </motion.div>
@@ -36,7 +37,7 @@ const Header = () => {
           className="flex space-x-4"
         >
           <a 
-            href="https://x.com/SAVERCOIN1?t=Any9u49amDmap8E26-B8rA&s=09" 
+            href="https://twitter.com/SAVERCOIN1" 
             target="_blank" 
             rel="noopener noreferrer"
             className="p-2 rounded-full bg-saver-green/10 hover:bg-saver-green/20 transition-colors"
@@ -46,6 +47,7 @@ const Header = () => {
           </a>
           <a 
             href="https://t.me/savercoin1" 
+                        target="_blank" 
             className="p-2 rounded-full bg-saver-green/10 hover:bg-saver-green/20 transition-colors"
             aria-label="Telegram"
           >

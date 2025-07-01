@@ -33,21 +33,21 @@ const Footer = () => {
                 <FaTwitter className="text-xl" />
               </a>
               <a 
-                href="#" 
+                href="https://t.me/savercoin1" 
                 className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors"
                 aria-label="Telegram"
               >
                 <FaTelegram className="text-xl" />
               </a>
-              <a 
+              {/* <a 
                 href="#" 
                 className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors"
                 aria-label="Reddit"
               >
                 <FaReddit className="text-xl" />
-              </a>
+              </a> */}
               <a 
-                href="#" 
+                href="https://github.com/Ticoworld/saver-site" 
                 className="bg-white/10 p-3 rounded-full hover:bg-white/20 transition-colors"
                 aria-label="GitHub"
               >

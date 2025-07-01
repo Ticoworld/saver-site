@@ -1,4 +1,3 @@
-// src/components/Hero.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaArrowDown } from 'react-icons/fa';
@@ -28,20 +27,25 @@ const Hero = () => {
               A community-first meme token for preparedness, mutual help, and real value.
             </p>
             <div className="flex flex-wrap gap-4">
-              <motion.button
+              <motion.a
+                href="https://four.meme/token/0xd2bdf8d84a9d8c77da58385582f706e1eb894444"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-saver-green text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all"
+                className="bg-saver-green text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all inline-block"
               >
                 Buy Now
-              </motion.button>
-              <motion.button
+              </motion.a>
+              
+              <motion.a
+                href="#about"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="border-2 border-saver-green text-saver-green px-6 py-3 rounded-full font-semibold hover:bg-saver-green/10 transition-all"
+                className="border-2 border-saver-green text-saver-green px-6 py-3 rounded-full font-semibold hover:bg-saver-green/10 transition-all inline-block"
               >
                 Learn More
-              </motion.button>
+              </motion.a>
             </div>
           </motion.div>
           
