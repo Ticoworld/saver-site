@@ -1,10 +1,11 @@
-// src/App.jsx
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Tokenomics from './components/Tokenomics';
 import HowToBuy from './components/HowToBuy';
+import DexScreener from './components/DexScreener';
+import CoinGecko from './components/CoinGecko';
 import Roadmap from './components/Roadmap';
 import Footer from './components/Footer';
 
@@ -16,6 +17,8 @@ function App() {
       <About />
       <Tokenomics />
       <HowToBuy />
+      <DexScreener />
+      <CoinGecko />
       <Roadmap />
       <Footer />
     </div>

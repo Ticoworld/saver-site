@@ -1,4 +1,3 @@
-// src/components/HowToBuy.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaWallet, FaSearch, FaExchangeAlt, FaLink } from 'react-icons/fa';
@@ -18,7 +17,7 @@ const HowToBuy = () => {
     {
       icon: <FaExchangeAlt className="text-2xl" />,
       title: "Connect to DEX",
-      description: "Go to four.meme and connect your wallet"
+      description: "Go to PancakeSwap and connect your wallet"
     },
     {
       icon: <FaLink className="text-2xl" />,
@@ -63,26 +62,49 @@ const HowToBuy = () => {
           ))}
         </div>
         
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="bg-gradient-to-r from-saver-green to-emerald-500 rounded-2xl p-8 text-center text-white"
-        >
-          <h3 className="text-2xl font-bold mb-4">Direct Purchase Link</h3>
-          <p className="mb-6 max-w-2xl mx-auto">
-            Skip the steps and go directly to the purchase page on four.meme
-          </p>
-          <a 
-            href="https://four.meme/token/0xd2bdf8d84a9d8c77da58385582f706e1eb894444" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-block bg-white text-saver-green px-6 py-3 rounded-full font-bold shadow-lg hover:bg-gray-100 transition-colors"
+        <div className="grid md:grid-cols-2 gap-8">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-gradient-to-r from-emerald-300 to-emerald-500 rounded-2xl p-8 text-center text-white"
           >
-            Buy SAVER on four.meme
-          </a>
-        </motion.div>
+            <h3 className="text-2xl font-bold mb-4">Buy on PancakeSwap</h3>
+            <p className="mb-6 max-w-2xl mx-auto">
+              Trade directly on PancakeSwap (recommended)
+            </p>
+            <a 
+              href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0xd2bdf8d84a9d8c77da58385582f706e1eb894444" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-saver-green px-6 py-3 rounded-full font-bold shadow-lg hover:bg-gray-100 transition-colors"
+            >
+              Buy on PancakeSwap
+            </a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-8 text-center text-white"
+          >
+            <h3 className="text-2xl font-bold mb-4">Track on DexScreener</h3>
+            <p className="mb-6 max-w-2xl mx-auto">
+              Monitor price and trading volume
+            </p>
+            <a 
+              href="https://dexscreener.com/bsc/0x16E1a9b9BbE22707020f8b1D569182B4f75C50BE" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block bg-white text-blue-600 px-6 py-3 rounded-full font-bold shadow-lg hover:bg-gray-100 transition-colors"
+            >
+              View DexScreener
+            </a>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,12 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaArrowDown } from 'react-icons/fa';
 import HeroImage from '/logo.png';
 
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center pt-16 pb-20 relative overflow-hidden">
-      {/* Background decoration */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-96 h-96 bg-saver-green/5 rounded-full transform -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-saver-green/10 rounded-full transform translate-x-1/4 translate-y-1/3"></div>
@@ -28,23 +26,25 @@ const Hero = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <motion.a
-                href="https://four.meme/token/0xd2bdf8d84a9d8c77da58385582f706e1eb894444"
+                href="https://pancakeswap.finance/swap?inputCurrency=BNB&outputCurrency=0xd2bdf8d84a9d8c77da58385582f706e1eb894444"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-saver-green text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all inline-block"
               >
-                Buy Now
+                Buy on PancakeSwap
               </motion.a>
               
               <motion.a
-                href="#about"
+                href="https://four.meme/token/0xd2bdf8d84a9d8c77da58385582f706e1eb894444"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-saver-green text-saver-green px-6 py-3 rounded-full font-semibold hover:bg-saver-green/10 transition-all inline-block"
               >
-                Learn More
+                Buy on Four.meme
               </motion.a>
             </div>
           </motion.div>
@@ -57,7 +57,6 @@ const Hero = () => {
           >
             <div className="relative">
               <div className="relative w-64 h-64 md:w-80 md:h-80">
-                {/* Hero image with decorative elements */}
                 <div className="absolute inset-0 bg-saver-green/10 rounded-2xl transform rotate-6"></div>
                 <div className="absolute inset-0 bg-saver-green/5 rounded-2xl transform -rotate-3"></div>
                 

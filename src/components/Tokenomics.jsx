@@ -1,4 +1,3 @@
-// src/components/Tokenomics.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import CopyAddress from './CopyAddress';
@@ -16,14 +15,13 @@ const Tokenomics = () => {
     '0% Buy/Sell Tax: Fair, clean and efficient',
     'No Presale: Launched fairly on Four.meme',
     'No Dev Wallets: Team only owns what they buy',
-    'Virtual liquidity on four.meme',
-    'Migration to PancakeSwap at approx $30,000 market cap',
+    'Liquidity now on PancakeSwap',
+    'Achieved $30K+ market cap',
     'LP is open, public and community-visible'
   ];
 
   return (
     <section id="tokenomics" className="py-20 bg-gradient-to-br from-saver-green/5 to-saver-green/10 relative overflow-hidden">
-      {/* Background decoration */}
       <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-white/5 to-transparent hidden sm:block"></div>
       <div className="absolute bottom-0 right-0 w-64 h-64 bg-saver-green/10 rounded-full transform translate-x-1/3 translate-y-1/3 hidden sm:block"></div>
 
@@ -43,7 +41,6 @@ const Tokenomics = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Token Information Card */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -68,7 +65,6 @@ const Tokenomics = () => {
             </div>
           </motion.div>
 
-          {/* Tokenomics Features Card */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}

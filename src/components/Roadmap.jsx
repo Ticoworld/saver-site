@@ -1,4 +1,3 @@
-// src/components/Roadmap.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -8,9 +7,9 @@ const Roadmap = () => {
       title: "Phase 1",
       subtitle: "Launch & Foundation",
       items: [
-        "Launch on four.meme",
-        "Organic Telegram & Twitter/X growth",
-        "Brand, Logo, contract & docs live"
+        " Launch on four.meme (Completed)",
+        " Organic Telegram & Twitter/X growth (Completed)",
+        " Brand, Logo, contract & docs live (Completed)"
       ],
       status: "completed"
     },
@@ -18,12 +17,12 @@ const Roadmap = () => {
       title: "Phase 2",
       subtitle: "Growth Milestone",
       items: [
-        "Hit $30K market cap",
-        "Launch on PancakeSwap",
-        "First exchange listing research",
-        "Partnerships & exposure"
+        " Hit $30K market cap (Completed)",
+        " Launch on PancakeSwap (Completed)",
+        " First exchange listing research (Completed)",
+        " Partnerships & exposure (Completed)"
       ],
-      status: "current"
+      status: "completed"
     },
     {
       title: "Phase 3",
@@ -34,13 +33,12 @@ const Roadmap = () => {
         "SAVER utility development",
         "Global outreach"
       ],
-      status: "upcoming"
+      status: "current"
     }
   ];
 
   return (
     <section id="roadmap" className="py-20 bg-gradient-to-b from-saver-green/5 to-white relative overflow-hidden">
-      {/* Background decoration */}
       <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-saver-green/3 to-transparent"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-saver-green/5 rounded-full transform translate-x-1/3 translate-y-1/3"></div>
       
@@ -60,7 +58,6 @@ const Roadmap = () => {
         </motion.div>
         
         <div className="relative">
-          {/* Timeline line */}
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-saver-green/30 transform -translate-x-1/2"></div>
           
           <div className="space-y-12">
@@ -73,10 +70,8 @@ const Roadmap = () => {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className={`relative flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} items-center`}
               >
-                {/* Timeline point */}
                 <div className="absolute left-4 md:left-1/2 w-6 h-6 rounded-full bg-saver-green border-4 border-white transform -translate-x-1/2 z-10"></div>
                 
-                {/* Phase card */}
                 <div className={`md:w-5/12 ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8'} mt-8 md:mt-0`}>
                   <div className={`bg-white rounded-xl shadow-lg p-6 border-l-4 ${
                     phase.status === 'completed' ? 'border-emerald-500' : 
@@ -104,7 +99,6 @@ const Roadmap = () => {
                   </div>
                 </div>
                 
-                {/* Empty space on the other side */}
                 <div className="md:w-5/12 hidden md:block"></div>
               </motion.div>
             ))}
