@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import LeaderboardTable from './LeaderboardTable';
 import CountdownTimer from './CountdownTimer';
 
+
+
 const LeaderboardPage = () => {
   const [leaderboardData, setLeaderboardData] = useState([]);
   const [loading, setLoading] = useState(true);

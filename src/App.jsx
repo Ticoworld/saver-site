@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div className="min-h-screen bg-gradient-to-b from-saver-green/5 to-white font-sans">
         <Header />
-        <main>
+        <main className='py-10'>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/leaderboard" element={<LeaderboardPage />} />

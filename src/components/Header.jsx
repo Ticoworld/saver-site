@@ -42,7 +42,7 @@ const Header = () => {
           >
             <Link 
               to="/leaderboard" 
-              className={`hidden md:inline-block px-4 py-2 rounded-full font-medium transition-colors ${
+              className={`text-xs md:inline-block px-4 py-2 rounded-full font-medium transition-colors ${
                 scrolled 
                   ? 'bg-saver-green text-white hover:bg-green-600' 
                   : 'bg-green-700 text-white hover:bg-white/30'
