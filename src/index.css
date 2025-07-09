@@ -12,7 +12,7 @@
 @layer base {
   body {
     @apply text-gray-800;
-    font-family: 'Lato', sans-serif; /* ✅ Global font is now Lato */
+    font-family: 'Lato', sans-serif;
   }
   
   h1, h2, h3, h4 {
