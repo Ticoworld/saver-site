@@ -36,7 +36,7 @@ const Hero = () => {
                 Buy on PancakeSwap
               </motion.a>
               
-              <motion.a
+              {/* <motion.a
                 href="https://four.meme/token/0xd2bdf8d84a9d8c77da58385582f706e1eb894444"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -45,7 +45,7 @@ const Hero = () => {
                 className="border-2 border-saver-green text-saver-green px-6 py-3 rounded-full font-semibold hover:bg-saver-green/10 transition-all inline-block"
               >
                 Buy on Four.meme
-              </motion.a>
+              </motion.a> */}
             </div>
           </motion.div>
           
