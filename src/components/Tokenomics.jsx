@@ -17,7 +17,10 @@ const Tokenomics = () => {
     'No Dev Wallets: Team only owns what they buy',
     'Liquidity now on PancakeSwap',
     'Achieved $30K+ market cap',
-    'LP is open, public and community-visible'
+    'LP is open, public and community-visible',
+    '5% Supply burned - 950M in supply',
+    'Liquidity locked and burned',
+    'Contract locked'
   ];
 
   return (
