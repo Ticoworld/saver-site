@@ -6,7 +6,7 @@ const Tokenomics = () => {
   const tokenDetails = [
     { title: 'Token Name', value: 'SAVER' },
     { title: 'Ticker', value: '$SAVER' },
-    { title: 'Total Supply', value: '1,000,000,000' },
+    { title: 'Total Supply', value: '950,000,000' },
     { title: 'Blockchain', value: 'BNB Smart Chain (BSC)' },
   ];
 
