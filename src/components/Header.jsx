@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaTwitter, FaTelegram, FaTrophy } from 'react-icons/fa';
+import { FaTwitter, FaTelegram, FaTrophy, FaDiscord } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -78,6 +78,15 @@ const Header = () => {
               aria-label="Telegram"
             >
               <FaTelegram className="text-saver-green text-lg sm:text-xl" />
+            </a>
+            <a 
+              href="https://discord.com/invite/jYdn3C8t4G" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-saver-green/10 hover:bg-saver-green/20 transition-colors"
+              aria-label="Discord"
+            >
+              <FaDiscord className="text-saver-green text-lg sm:text-xl" />
             </a>
           </motion.div>
         </div>

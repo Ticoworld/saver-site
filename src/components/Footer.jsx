@@ -1,5 +1,5 @@
 import React from "react";
-import { FaTwitter, FaTelegram, FaGithub, FaTrophy } from "react-icons/fa";
+import { FaTwitter, FaTelegram, FaGithub, FaTrophy, FaDiscord } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -66,6 +66,15 @@ const Footer = () => {
                     aria-label="Telegram"
                   >
                     <FaTelegram className="text-lg" />
+                  </a>
+                  <a
+                    href="https://discord.com/invite/jYdn3C8t4G"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors"
+                    aria-label="Discord"
+                  >
+                    <FaDiscord className="text-lg" />
                   </a>
                   <a
                     href="https://github.com/Ticoworld/saver-site"
