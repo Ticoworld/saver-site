@@ -13,7 +13,7 @@ const HomePage = () => {
     <>
       <Hero />
       <About />
-      <ContestPromo /> {/* Add contest promo section */}
+      {/* <ContestPromo /> Add contest promo section */}
       <Tokenomics />
       <HowToBuy />
       <DexScreener />
