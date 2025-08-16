@@ -16,8 +16,11 @@ const About = () => {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">What is <span className="text-saver-green">SAVER</span>?</h2>
           <div className="w-20 h-1 bg-saver-green mx-auto mb-6"></div>
+          <p className="text-lg max-w-3xl mx-auto mb-6">
+            It’s a movement for preparedness and personal responsibility – <span className="font-bold">‘I will become a SAVER.’</span> It’s about building a community, a mindset, and a culture that makes readiness fun, shareable, and engaging.
+          </p>
           <p className="text-lg max-w-3xl mx-auto">
-            SAVER is a community-first meme token born in uncertain times. It stands for preparedness, mutual help, and real value.
+            <span className="font-bold">Utility:</span> $SAVER is used to purchase NFTs, which give access to perks, whitelists, and exclusive community benefits. 10% of NFT sales go to charity. Additionally, holding $SAVER serves as a symbolic reminder to save and prepare, both financially and personally.
           </p>
         </motion.div>
         
