@@ -1,24 +1,60 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import Hero from '../src/components/Hero';
 import About from '../src/components/About';
-import Tokenomics from '../src/components/Tokenomics';
-import HowToBuy from '../src/components/HowToBuy';
-import DexScreener from '../src/components/DexScreener';
-import CoinGecko from '../src/components/CoinGecko';
-import Roadmap from '../src/components/Roadmap';
-import ContestPromo from '../src/components/ContestPromo'; // Add this
+
+// Lazy load components below the fold
+const Story = lazy(() => import('../src/components/Story'));
+const Tokenomics = lazy(() => import('../src/components/Tokenomics'));
+const Utilities = lazy(() => import('../src/components/Utilities'));
+const Community = lazy(() => import('../src/components/Community'));
+const HowToBuy = lazy(() => import('../src/components/HowToBuy'));
+const DexScreener = lazy(() => import('../src/components/DexScreener'));
+const CoinGecko = lazy(() => import('../src/components/CoinGecko'));
+const Roadmap = lazy(() => import('../src/components/Roadmap'));
+
+const SectionFallback = () => (
+  <div className="py-24 flex justify-center">
+    <div className="animate-pulse bg-gradient-to-r from-emerald-100 to-neutral-100 rounded-lg h-32 w-full max-w-md"></div>
+  </div>
+);
 
 const HomePage = () => {
   return (
     <>
       <Hero />
       <About />
-      {/* <ContestPromo /> Add contest promo section */}
-      <Tokenomics />
-      <HowToBuy />
-      <DexScreener />
-      <CoinGecko />
-      <Roadmap />
+      
+      <Suspense fallback={<SectionFallback />}>
+        <Story />
+      </Suspense>
+      
+      <Suspense fallback={<SectionFallback />}>
+        <Tokenomics />
+      </Suspense>
+      
+      <Suspense fallback={<SectionFallback />}>
+        <Utilities />
+      </Suspense>
+      
+      <Suspense fallback={<SectionFallback />}>
+        <HowToBuy />
+      </Suspense>
+      
+      <Suspense fallback={<SectionFallback />}>
+        <DexScreener />
+      </Suspense>
+      
+      <Suspense fallback={<SectionFallback />}>
+        <CoinGecko />
+      </Suspense>
+      
+      <Suspense fallback={<SectionFallback />}>
+        <Roadmap />
+      </Suspense>
+      
+      <Suspense fallback={<SectionFallback />}>
+        <Community />
+      </Suspense>
     </>
   );
 };

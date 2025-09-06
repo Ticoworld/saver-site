@@ -47,11 +47,7 @@ const contestEnd = new Date('2025-07-16T15:00:00Z');   // Changed from 14:00 to 
   }, []);
 
   if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-saver-green"></div>
-      </div>
-    );
+    return null; // Loader handled globally
   }
 
   if (error) {

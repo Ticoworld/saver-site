@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { FaTwitter, FaTelegram, FaTrophy, FaDiscord } from 'react-icons/fa';
+import { motion as Motion } from 'framer-motion';
+import { FaTwitter, FaTelegram, FaDiscord, FaTiktok } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import SOS from '../config/sos';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -15,80 +16,90 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
+    <header className={`fixed w-full z-[99999] transition-all duration-500 ${scrolled ? 'bg-white/98 backdrop-blur-xl shadow-xl border-b border-neutral-100 py-3' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <motion.div 
-          initial={{ opacity: 0, x: -20 }}
+        <Motion.div 
+          initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex items-center space-x-2"
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex items-center space-x-3"
         >
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-saver-green w-10 h-10 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">S</span>
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="relative">
+              <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-emerald-400 rounded-xl opacity-0 group-hover:opacity-100 blur transition-all duration-300"></div>
+              <img 
+                src="/logo.jpg" 
+                alt="SAVER ON SOL" 
+                className="relative w-12 h-12 rounded-xl object-cover border-2 border-emerald-200 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110"
+                loading="eager"
+                decoding="async"
+              />
             </div>
-            <h1 className="text-xl font-bold text-saver-green">SAVER<span className="text-black">COIN</span></h1>
+            <div className="hidden sm:block">
+              <h1 className="text-xl font-display font-bold text-neutral-900 leading-tight group-hover:text-emerald-600 transition-colors duration-300">
+                SAVER ON{' '}
+                <span className="text-emerald-600 group-hover:text-emerald-500">SOL</span>
+              </h1>
+              <div className="text-xs text-neutral-500 font-medium">$SOS • Memecoin Revolution</div>
+            </div>
           </Link>
-        </motion.div>
+        </Motion.div>
         
-        <div className="flex items-center space-x-4 sm:space-x-6">
-          {/* Perfect circular leaderboard button */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <Link 
-              to="/leaderboard" 
-              className={`
-                flex items-center justify-center
-                w-10 h-10 rounded-full font-medium transition-colors
-                ${scrolled 
-                  ? 'bg-saver-green text-white hover:bg-green-600' 
-                  : 'bg-green-700 text-white hover:bg-white/30'
-                }`}
-              aria-label="Leaderboard"
-            >
-              <FaTrophy className="text-lg" />
-              <span className="sr-only">Leaderboard</span>
-            </Link>
-          </motion.div>
-          
+        <div className="flex items-center space-x-4">
           {/* Social Icons */}
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
+          <Motion.div 
+            initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex space-x-3 sm:space-x-4"
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="flex space-x-2"
           >
-            <a 
-              href="https://twitter.com/SAVERCOIN1" 
+            <Motion.a 
+              href={SOS.links.twitter || 'https://x.com'} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-saver-green/10 hover:bg-saver-green/20 transition-colors"
+              className="p-2.5 rounded-xl bg-neutral-100/80 hover:bg-emerald-100 transition-all duration-300 hover:scale-110 active:scale-95 group"
               aria-label="Twitter"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <FaTwitter className="text-saver-green text-lg sm:text-xl" />
-            </a>
-            <a 
-              href="https://t.me/savercoin1" 
+              <FaTwitter className="text-neutral-700 group-hover:text-emerald-600 text-sm transition-colors duration-300" />
+            </Motion.a>
+            <Motion.a 
+              href={SOS.links.telegram || '#'} 
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-saver-green/10 hover:bg-saver-green/20 transition-colors"
+              className="p-2.5 rounded-xl bg-neutral-100/80 hover:bg-emerald-100 transition-all duration-300 hover:scale-110 active:scale-95 group"
               aria-label="Telegram"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <FaTelegram className="text-saver-green text-lg sm:text-xl" />
-            </a>
-            <a 
-              href="https://discord.com/invite/jYdn3C8t4G" 
+              <FaTelegram className="text-neutral-700 group-hover:text-emerald-600 text-sm transition-colors duration-300" />
+            </Motion.a>
+            <Motion.a 
+              href={SOS.links.discord || '#'} 
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-full bg-saver-green/10 hover:bg-saver-green/20 transition-colors"
+              className="p-2.5 rounded-xl bg-neutral-100/80 hover:bg-emerald-100 transition-all duration-300 hover:scale-110 active:scale-95 group"
               aria-label="Discord"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <FaDiscord className="text-saver-green text-lg sm:text-xl" />
-            </a>
-          </motion.div>
+              <FaDiscord className="text-neutral-700 group-hover:text-emerald-600 text-sm transition-colors duration-300" />
+            </Motion.a>
+            {SOS.links.tiktok && (
+              <Motion.a 
+                href={SOS.links.tiktok} 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-xl bg-neutral-100/80 hover:bg-emerald-100 transition-all duration-300 hover:scale-110 active:scale-95 group"
+                aria-label="TikTok"
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaTiktok className="text-neutral-700 group-hover:text-emerald-600 text-sm transition-colors duration-300" />
+              </Motion.a>
+            )}
+          </Motion.div>
         </div>
       </div>
     </header>

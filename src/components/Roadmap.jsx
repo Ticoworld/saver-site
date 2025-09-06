@@ -1,106 +1,128 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
+import { 
+  CheckCircleIcon, 
+  ClockIcon, 
+  PlayCircleIcon 
+} from '@heroicons/react/24/outline';
 
 const Roadmap = () => {
   const phases = [
     {
-      title: "Phase 1",
-      subtitle: "Launch & Foundation",
+      title: 'Q3 2025',
+      subtitle: 'Foundation & Launch',
       items: [
-        " Launch on four.meme (Completed)",
-        " Organic Telegram & Twitter/X growth (Completed)",
-        " Brand, Logo, contract & docs live (Completed)"
+        'Platform launch on Solana mainnet',
+        'Professional brand identity deployment',
+        'Strategic marketing campaign initiation',
+        'DEX listing and analytics integration'
       ],
-      status: "completed"
+      status: 'current',
+      icon: PlayCircleIcon
     },
     {
-      title: "Phase 2",
-      subtitle: "Growth Milestone",
+      title: 'Q4 2025',
+      subtitle: 'Growth & Expansion',
       items: [
-        " Hit $30K market cap (Completed)",
-        " Launch on PancakeSwap (Completed)",
-        " First exchange listing research (Completed)",
-        " Partnerships & exposure (Completed)"
+        'Liquidity enhancement partnerships',
+        'Premium NFT collection release',
+        'Community merchandise platform',
+        'Treasury governance implementation'
       ],
-      status: "completed"
+      status: 'upcoming',
+      icon: ClockIcon
     },
     {
-      title: "Phase 3",
-      subtitle: "Expansion",
+      title: 'Q1 2026',
+      subtitle: 'Ecosystem & Innovation',
       items: [
-        "CEX listings",
-        "Community initiatives",
-        "SAVER utility development",
-        "Global outreach"
+        'DAO governance infrastructure',
+        'Advanced utility suite deployment',
+        'Cross-chain integration capabilities',
+        'Strategic ecosystem partnerships'
       ],
-      status: "current"
+      status: 'upcoming',
+      icon: ClockIcon
     }
   ];
 
   return (
-    <section id="roadmap" className="py-20 bg-gradient-to-b from-saver-green/5 to-white relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-saver-green/3 to-transparent"></div>
-      <div className="absolute bottom-0 right-0 w-80 h-80 bg-saver-green/5 rounded-full transform translate-x-1/3 translate-y-1/3"></div>
+    <section id="roadmap" className="py-24 bg-gradient-to-br from-neutral-50 via-emerald-50/30 to-white relative overflow-hidden">
+      <div className="absolute inset-0 opacity-[0.02]">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}></div>
+      </div>
       
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div
+      <div className="container mx-auto px-4 relative">
+        <Motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our <span className="text-saver-green">Roadmap</span></h2>
-          <div className="w-20 h-1 bg-saver-green mx-auto mb-6"></div>
-          <p className="text-lg max-w-3xl mx-auto">
-            The journey of SAVER - built on transparency and community growth
+          <div className="inline-flex items-center px-4 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm font-medium mb-6">
+            Development Roadmap
+          </div>
+          <h2 className="text-5xl md:text-6xl font-bold mb-8 text-neutral-900">
+            Strategic <span className="text-emerald-600">Timeline</span>
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-emerald-600 to-emerald-400 mx-auto mb-8 rounded-full"></div>
+          <p className="text-xl md:text-2xl max-w-4xl mx-auto text-neutral-600 leading-relaxed">
+            Our systematic approach to building sustainable value and ecosystem growth
           </p>
-        </motion.div>
+        </Motion.div>
         
-        <div className="relative">
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-saver-green/30 transform -translate-x-1/2"></div>
+        <div className="relative max-w-6xl mx-auto">
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-emerald-500 via-emerald-400 to-emerald-300 transform md:-translate-x-1/2"></div>
           
-          <div className="space-y-12">
+          <div className="space-y-16">
             {phases.map((phase, index) => (
-              <motion.div
+              <Motion.div
                 key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
                 className={`relative flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} items-center`}
               >
-                <div className="absolute left-4 md:left-1/2 w-6 h-6 rounded-full bg-saver-green border-4 border-white transform -translate-x-1/2 z-10"></div>
+                <div className="absolute left-8 md:left-1/2 w-12 h-12 rounded-full bg-white border-4 border-emerald-500 flex items-center justify-center transform md:-translate-x-1/2 z-10 shadow-lg">
+                  <phase.icon className={`w-6 h-6 ${phase.status === 'current' ? 'text-emerald-600' : 'text-neutral-500'}`} />
+                </div>
                 
-                <div className={`md:w-5/12 ${index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8'} mt-8 md:mt-0`}>
-                  <div className={`bg-white rounded-xl shadow-lg p-6 border-l-4 ${
-                    phase.status === 'completed' ? 'border-emerald-500' : 
-                    phase.status === 'current' ? 'border-saver-green' : 'border-gray-300'
-                  }`}>
-                    <div className={`inline-block px-3 py-1 rounded-full text-sm font-semibold mb-3 ${
-                      phase.status === 'completed' ? 'bg-emerald-100 text-emerald-800' : 
-                      phase.status === 'current' ? 'bg-saver-green/10 text-saver-green' : 'bg-gray-100 text-gray-600'
+                <div className={`md:w-5/12 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'} ml-16 md:ml-0`}>
+                  <div className="bg-white rounded-2xl shadow-xl p-8 border border-neutral-100 hover:shadow-2xl transition-shadow duration-300">
+                    <div className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold mb-4 ${
+                      phase.status === 'current' 
+                        ? 'bg-emerald-100 text-emerald-800' 
+                        : 'bg-neutral-100 text-neutral-600'
                     }`}>
                       {phase.title}
                     </div>
-                    <h3 className="text-xl font-bold mb-2">{phase.subtitle}</h3>
-                    <ul className={`space-y-2 ${index % 2 === 0 ? 'md:text-right' : ''}`}>
+                    <h3 className="text-2xl font-bold mb-6 text-neutral-900">{phase.subtitle}</h3>
+                    <ul className="space-y-3">
                       {phase.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start">
-                          {phase.status === 'completed' ? (
-                            <span className="text-emerald-500 mr-2">✓</span>
-                          ) : (
-                            <span className="text-saver-green mr-2">•</span>
-                          )}
-                          <span>{item}</span>
-                        </li>
+                        <Motion.li 
+                          key={itemIndex}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.5, delay: 0.1 * itemIndex }}
+                          className="flex items-start space-x-3"
+                        >
+                          <div className={`w-2 h-2 rounded-full mt-2.5 ${
+                            phase.status === 'current' ? 'bg-emerald-500' : 'bg-neutral-400'
+                          }`}></div>
+                          <span className="text-neutral-700 leading-relaxed">{item}</span>
+                        </Motion.li>
                       ))}
                     </ul>
                   </div>
                 </div>
                 
                 <div className="md:w-5/12 hidden md:block"></div>
-              </motion.div>
+              </Motion.div>
             ))}
           </div>
         </div>

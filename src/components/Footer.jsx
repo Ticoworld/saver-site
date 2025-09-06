@@ -1,102 +1,145 @@
 import React from "react";
-import { FaTwitter, FaTelegram, FaGithub, FaTrophy, FaDiscord } from "react-icons/fa";
+import { FaTwitter, FaTelegram, FaGithub, FaDiscord } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import SOS from '../config/sos';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-saver-green text-white py-12">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-8">
+    <footer className="bg-saver-dark text-white py-16 relative overflow-hidden">
+      {/* Professional background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-transparent to-transparent"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-12">
           {/* Brand Section */}
-          <div className="max-w-xs">
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="bg-white w-10 h-10 rounded-full flex items-center justify-center shrink-0">
-                <span className="text-saver-green font-bold text-lg">S</span>
+          <div className="max-w-md">
+            <div className="flex items-center space-x-4 mb-6">
+              <img 
+                src="/logo.jpg" 
+                alt="SAVER ON SOL" 
+                className="w-14 h-14 rounded-xl object-cover ring-2 ring-emerald-400/30 shadow-lg"
+                loading="lazy"
+                decoding="async"
+              />
+              <div>
+                <h2 className="text-2xl font-bold">
+                  SAVER ON <span className="solana-text-gradient">SOL</span>
+                </h2>
+                <p className="text-emerald-400 text-sm font-medium">$SOS</p>
               </div>
-              <h2 className="text-xl font-bold">
-                SAVER<span className="text-white/80">COIN</span>
-              </h2>
             </div>
-            <p className="text-white/80">
-              Built to Support, Made to Last. Join our community for
-              preparedness and mutual help.
+            <p className="text-white/80 leading-relaxed text-lg">
+              Professional community-driven token on Solana. Building sustainable value through innovation and transparency.
             </p>
           </div>
 
           {/* Links & Social Section */}
           <div className="w-full lg:w-auto">
-            <div className="flex flex-col sm:flex-row gap-8 justify-between">
+            <div className="flex flex-col sm:flex-row gap-12 justify-between">
               {/* Navigation Links */}
-              <div className="flex flex-col space-y-3">
-                <h3 className="font-bold text-white/90">Navigation</h3>
+              <div className="flex flex-col space-y-4">
+                <h3 className="font-bold text-white/90 text-lg">Navigation</h3>
                 <Link
                   to="/"
-                  className="text-white/80 hover:text-white transition-colors w-fit"
+                  className="text-white/70 hover:text-emerald-400 transition-colors w-fit text-base"
                 >
                   Home
                 </Link>
-                <Link
-                  to="/leaderboard"
-                  className="text-white/80 hover:text-white transition-colors w-fit flex items-center gap-2"
+                <a
+                  href="#utilities"
+                  className="text-white/70 hover:text-emerald-400 transition-colors w-fit text-base"
                 >
-                  Contest Leaderboard
-                </Link>
+                  Utilities
+                </a>
+                <a
+                  href="#tokenomics"
+                  className="text-white/70 hover:text-emerald-400 transition-colors w-fit text-base"
+                >
+                  Tokenomics
+                </a>
+                <a
+                  href="#roadmap"
+                  className="text-white/70 hover:text-emerald-400 transition-colors w-fit text-base"
+                >
+                  Roadmap
+                </a>
               </div>
 
               {/* Social Links */}
-              <div className="flex flex-col space-y-3">
-                <h3 className="font-bold text-white/90">Community</h3>
-                <div className="flex space-x-4">
+              <div className="flex flex-col space-y-4">
+                <h3 className="font-bold text-white/90 text-lg">Community</h3>
+                <div className="flex flex-wrap gap-3">
                   <a
-                    href="https://twitter.com/SAVERCOIN1"
+                    href={SOS.links.twitter || 'https://x.com'}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors"
+                    className="bg-white/10 p-3 rounded-xl hover:bg-emerald-600/20 transition-all duration-300 hover:scale-110"
                     aria-label="Twitter"
                   >
-                    <FaTwitter className="text-lg" />
+                    <FaTwitter className="text-xl" />
                   </a>
                   <a
-                    href="https://t.me/savercoin1"
+                    href={SOS.links.telegram || '#'}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors"
+                    className="bg-white/10 p-3 rounded-xl hover:bg-emerald-600/20 transition-all duration-300 hover:scale-110"
                     aria-label="Telegram"
                   >
-                    <FaTelegram className="text-lg" />
+                    <FaTelegram className="text-xl" />
                   </a>
                   <a
-                    href="https://discord.com/invite/jYdn3C8t4G"
+                    href={SOS.links.discord || '#'}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors"
+                    className="bg-white/10 p-3 rounded-xl hover:bg-emerald-600/20 transition-all duration-300 hover:scale-110"
                     aria-label="Discord"
                   >
-                    <FaDiscord className="text-lg" />
+                    <FaDiscord className="text-xl" />
                   </a>
+                  {SOS.links.tiktok && (
+                    <a
+                      href={SOS.links.tiktok}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white/10 p-3 rounded-xl hover:bg-emerald-600/20 transition-all duration-300 hover:scale-110"
+                      aria-label="TikTok"
+                    >
+                      <FaTiktok className="text-xl" />
+                    </a>
+                  )}
                   <a
                     href="https://github.com/Ticoworld/saver-site"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors"
+                    className="bg-white/10 p-3 rounded-xl hover:bg-emerald-600/20 transition-all duration-300 hover:scale-110"
                     aria-label="GitHub"
                   >
-                    <FaGithub className="text-lg" />
+                    <FaGithub className="text-xl" />
                   </a>
                 </div>
               </div>
             </div>
 
             {/* Copyright */}
-            <div className="mt-8 pt-6 border-t border-white/10">
-              <p className="text-white/70 text-sm">
-                &copy; {currentYear} SAVERCOIN. All rights reserved.
-              </p>
-              <p className="text-white/50 text-xs mt-2 max-w-md">
-                This website is for informational purposes only. Cryptocurrency
-                investments are volatile and high risk.
+            <div className="mt-12 pt-8 border-t border-white/10">
+              <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p className="text-white/70 text-base">
+                  © {currentYear} SAVER ON SOL ($SOS). All rights reserved.
+                </p>
+                <div className="flex items-center space-x-4 text-sm text-white/50">
+                  <a href="#" className="hover:text-white/70 transition-colors">Privacy</a>
+                  <span>•</span>
+                  <a href="#" className="hover:text-white/70 transition-colors">Terms</a>
+                </div>
+              </div>
+              <p className="text-white/50 text-sm mt-4 max-w-2xl">
+                This website is for informational purposes only. Cryptocurrency investments are volatile and high risk. 
+                Always do your own research before making any investment decisions.
               </p>
             </div>
           </div>

@@ -1,12 +1,63 @@
-# React + Vite
+# $SAVER ON SOL ($SOS) Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Community-first meme & lifestyle token on Solana. Featuring Saver Dino the lifeguard.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## Expanding the ESLint configuration
+- **Brand:** Solana gradients, Saver Dino mascot, premium meme design
+- **Loader:** Unique, animated loader with logo and Dino Morse code SOS
+- **Performance:** Code splitting, lazy loading, shimmer fallbacks, optimized images
+- **Accessibility:** ARIA roles, prefers-reduced-motion, keyboard navigation
+- **SEO:** Meta tags, Open Graph, Twitter Card, favicon, semantic HTML
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Key Features
+
+- Dynamic hero entry animation (Framer Motion)
+- Single, branded loader (no duplicate loaders)
+- Community, Story, Utilities, Tokenomics, How to Buy sections
+- Pump.fun launch model
+
+## SEO
+
+SEO is implemented in `index.html`:
+- Title, description, keywords, author
+- Open Graph and Twitter Card meta tags
+- Favicon and font preconnect
+
+Update URLs and images as needed after deployment.
+
+## Loader Customization
+
+Loader is in `src/components/Loader.jsx`:
+- Uses logo and inline Dino SVG for Morse code
+- Edit SVG or styles for further branding
+
+## Launch Links
+
+Update launch links in `src/config/sos.js` after deployment:
+- `contractAddress`
+- `links.pumpFun`
+- `links.dexscreener`
+- `links.geckoTerminal`
+- `links.solscan`
+
+---
+
+## Development
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+---
+
+For questions or contributions, open an issue or PR.
