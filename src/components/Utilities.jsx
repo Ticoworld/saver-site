@@ -12,38 +12,38 @@ import {
 const Utilities = () => {
   const utilities = [
     { 
-      title: 'Community Governance', 
-      description: 'Decentralized decision-making platform for ecosystem development.',
+      title: 'Community First', 
+      description: 'Build a kind, disciplined culture where newcomers feel safe and supported.',
       icon: UserGroupIcon,
       gradient: 'from-emerald-500 to-teal-500'
     },
     { 
-      title: 'Yield Generation', 
-      description: 'Sustainable reward mechanisms and liquidity pool incentives.',
+      title: 'Education & Tools', 
+      description: 'Share simple guides, ideas, and resources that help people level up.',
       icon: ChartBarIcon,
       gradient: 'from-blue-500 to-indigo-500'
     },
     { 
-      title: 'Treasury Management', 
-      description: 'Transparent fund allocation for marketing and development.',
+      title: 'Transparent Funds', 
+      description: 'Clear, public updates on how community funds are allocated as we grow.',
       icon: BuildingLibraryIcon,
       gradient: 'from-purple-500 to-pink-500'
     },
     { 
-      title: 'Security Protocol', 
-      description: 'Multi-signature wallet and audited smart contract systems.',
+      title: 'Safety Mindset', 
+      description: 'Best-practice ops and partnerships; heavy tech like audits/DAO come later.',
       icon: ShieldCheckIcon,
       gradient: 'from-orange-500 to-red-500'
     },
     { 
-      title: 'NFT Ecosystem', 
-      description: 'Premium digital collectibles and utility-based NFT drops.',
+      title: 'Creative Culture', 
+      description: 'Memes, art, and Dino-themed drops as the brand takes shape.',
       icon: CubeIcon,
       gradient: 'from-cyan-500 to-blue-500'
     },
     { 
-      title: 'Future Expansion', 
-      description: 'Cross-chain integration and advanced DeFi product suite.',
+      title: 'Future Utilities', 
+      description: 'As milestones are hit: staking, DAO tools, or expansions may be explored.',
       icon: RocketLaunchIcon,
       gradient: 'from-green-500 to-emerald-500'
     },
@@ -67,15 +67,14 @@ const Utilities = () => {
           className="text-center mb-20"
         >
           <div className="inline-flex items-center px-4 py-2 bg-emerald-100 text-emerald-800 rounded-full text-sm font-medium mb-6">
-            Ecosystem Utilities
+            What We’re About
           </div>
           <h2 className="text-5xl md:text-6xl font-bold mb-8 text-neutral-900">
-            Built for <span className="text-emerald-600">Value</span>
+            Built for <span className="text-emerald-600">People</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-emerald-600 to-emerald-400 mx-auto mb-8 rounded-full"></div>
           <p className="text-xl md:text-2xl max-w-4xl mx-auto text-neutral-600 leading-relaxed">
-            Professional-grade infrastructure designed to deliver sustainable value and growth 
-            for the entire SAVER community ecosystem.
+            No promises we can’t keep. We start with story and community, then grow into utilities as the brand matures.
           </p>
         </Motion.div>
 
@@ -91,7 +90,7 @@ const Utilities = () => {
             >
               <div className="absolute -inset-px bg-gradient-to-r from-neutral-200 to-neutral-300 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative bg-white rounded-2xl p-8 shadow-lg border border-neutral-100 group-hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${util.gradient} flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${util.gradient} flex items-center justify-center mb-6 shadow-lg transition-transform duration-300`}>
                   <util.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-neutral-900 mb-4">{util.title}</h3>
@@ -121,27 +120,26 @@ const Utilities = () => {
             </div>
             <div className="relative z-10 max-w-3xl">
               <div className="inline-flex items-center px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-medium mb-6">
-                Professional Infrastructure
+                Near-term Focus
               </div>
               <h3 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                Enterprise-Grade <span className="text-emerald-400">Solutions</span>
+                Simple, Honest <span className="text-emerald-400">Execution</span>
               </h3>
               <p className="text-xl leading-relaxed mb-10 text-neutral-300">
-                Our platform combines institutional-level security with innovative DeFi mechanisms, 
-                creating sustainable value propositions that scale with community growth and market evolution.
+                Launch first. Learn fast. Share progress. Bigger features like staking, DAO, and tools will be evaluated as milestones are met.
               </p>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                  <h4 className="font-bold text-lg mb-2">Audited Security</h4>
-                  <p className="text-neutral-300 text-sm">Multi-layer security protocols</p>
+                  <h4 className="font-bold text-lg mb-2">Community Growth</h4>
+                  <p className="text-neutral-300 text-sm">Content, campaigns, and kindness</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                  <h4 className="font-bold text-lg mb-2">Scalable Design</h4>
-                  <p className="text-neutral-300 text-sm">Built for sustainable growth</p>
+                  <h4 className="font-bold text-lg mb-2">Transparency</h4>
+                  <p className="text-neutral-300 text-sm">Clear updates, no hype promises</p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                  <h4 className="font-bold text-lg mb-2">Community Focus</h4>
-                  <p className="text-neutral-300 text-sm">Transparent governance model</p>
+                  <h4 className="font-bold text-lg mb-2">Future Utilities</h4>
+                  <p className="text-neutral-300 text-sm">Unlock as milestones are hit</p>
                 </div>
               </div>
             </div>

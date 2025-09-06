@@ -52,7 +52,7 @@ const HowToBuy = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-emerald-600 to-emerald-400 mx-auto mb-8 rounded-full"></div>
           <p className="text-xl md:text-2xl max-w-4xl mx-auto text-neutral-600 leading-relaxed">
-            Simple, secure steps to become part of the SAVER ecosystem
+            Simple, secure steps to join the SAVER community
           </p>
         </Motion.div>
         
@@ -111,7 +111,7 @@ const HowToBuy = () => {
           >
             <h3 className="text-2xl font-bold mb-4">Market Analytics</h3>
             <p className="mb-6 text-neutral-300 leading-relaxed">
-              Monitor price and trading volume on professional analytics platforms
+              Monitor price and trading volume on analytics platforms
             </p>
             {SOS.links.dexscreener ? (
               <a 

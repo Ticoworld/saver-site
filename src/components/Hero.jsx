@@ -152,7 +152,7 @@ const Hero = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2, duration: 0.8 }}
               >
-                Enterprise-grade tokenomics meets 
+                The SAVER lifestyle meets 
               </Motion.span>{' '}
               <Motion.span
                 initial={{ opacity: 0 }}

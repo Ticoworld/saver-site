@@ -4,30 +4,33 @@ import {
   ShieldCheckIcon, 
   CurrencyDollarIcon, 
   UsersIcon,
-  ChartBarIcon 
+  ChartBarIcon,
+  FireIcon,
+  AcademicCapIcon,
+  HeartIcon
 } from '@heroicons/react/24/outline';
 
 const About = () => {
   const features = [
     {
       icon: ShieldCheckIcon,
-      title: 'Security First',
-      description: 'Multi-signature wallet protection and audited smart contracts'
+      title: 'Safety Mindset',
+      description: 'Best practices and careful partnerships as we grow'
     },
     {
       icon: CurrencyDollarIcon,
       title: 'Zero Tax',
-      description: 'No transaction fees to maximize holder value and trading efficiency'
+      description: 'No transaction fees to maximize holder value'
     },
     {
       icon: UsersIcon,
-      title: 'Community Driven',
-      description: 'Governance and development decisions made collectively'
+      title: 'Community First',
+      description: 'Building together with transparency and kindness'
     },
     {
       icon: ChartBarIcon,
-      title: 'Transparent',
-      description: 'Open treasury management and public development roadmap'
+      title: 'Simple Start',
+      description: 'Story and community first, then utilities as we mature'
     }
   ];
 
@@ -93,7 +96,7 @@ const About = () => {
               variants={itemVariants}
               className="text-4xl md:text-5xl font-display font-bold mb-8 text-neutral-900"
             >
-              Professional <span className="text-emerald-600">DeFi Infrastructure</span>
+              The Story of <span className="text-emerald-600">SAVER on SOL</span>
             </Motion.h2>
             
             <Motion.div 
@@ -101,14 +104,41 @@ const About = () => {
               className="space-y-6 text-lg text-neutral-600 leading-relaxed mb-12"
             >
               <p>
-                SAVER ON SOL represents the evolution of community-driven tokenomics on Solana. 
-                Built with institutional-grade security and transparency, $SOS combines sustainable 
-                economic models with innovative governance structures.
+                In a world full of noise and quick flips, SAVER on SOL ($SOS) was created with a simple mission: 
+                bring purpose, discipline, and strength back into crypto culture.
               </p>
               <p>
-                Our ecosystem prioritizes long-term value creation through strategic treasury management, 
-                community incentives, and utility-driven token mechanics that scale with network adoption.
+                At the heart of $SOS stands the SAVER Dino — our lifeguard, protector, and symbol of resilience. 
+                He represents a lifestyle built on fitness, learning, and kindness.
               </p>
+            </Motion.div>
+
+            {/* Core Values Section */}
+            <Motion.div 
+              variants={itemVariants}
+              className="grid md:grid-cols-3 gap-6 mb-12"
+            >
+              <div className="text-center">
+                <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <FireIcon className="w-6 h-6 text-emerald-600" />
+                </div>
+                <h4 className="font-bold text-neutral-900 mb-2">Strength</h4>
+                <p className="text-sm text-neutral-600">Like Dino at the gym — discipline and preparation in everything we do.</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <AcademicCapIcon className="w-6 h-6 text-emerald-600" />
+                </div>
+                <h4 className="font-bold text-neutral-900 mb-2">Knowledge</h4>
+                <p className="text-sm text-neutral-600">Always learning, sharing tools, ideas, and strategies with the community.</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <HeartIcon className="w-6 h-6 text-emerald-600" />
+                </div>
+                <h4 className="font-bold text-neutral-900 mb-2">Community</h4>
+                <p className="text-sm text-neutral-600">Helping friends, welcoming newcomers — kindness is our edge.</p>
+              </div>
             </Motion.div>
 
             {/* Mission Card */}
@@ -123,9 +153,8 @@ const About = () => {
             >
               <h3 className="text-xl font-bold text-emerald-800 mb-4">Our Mission</h3>
               <p className="text-neutral-700 leading-relaxed">
-                Building sustainable value through innovation and transparency. $SOS blends professional 
-                DeFi infrastructure with community governance, creating an ecosystem where technology 
-                meets sustainable growth.
+                $SOS isn't just another meme coin. It's a movement — a lifestyle built on the SAVER mindset. 
+                This is not just a coin. It's a mindset.
               </p>
             </Motion.div>
           </Motion.div>
@@ -150,7 +179,7 @@ const About = () => {
                 <div className="relative h-80 overflow-hidden">
                   <img 
                     src="/bullish.jpg" 
-                    alt="Professional Growth" 
+                    alt="SAVER Lifestyle" 
                     className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                     style={{ objectPosition: '50% 20%' }}
                     loading="lazy"
@@ -164,17 +193,17 @@ const About = () => {
                     className="absolute bottom-6 left-6 right-6"
                   >
                     <h4 className="text-white text-xl font-display font-bold mb-2">
-                      Sustainable Growth Strategy
+                      The SAVER Lifestyle
                     </h4>
                     <p className="text-neutral-200 text-sm">
-                      Professional infrastructure designed for long-term ecosystem development
+                      Strength, knowledge, and community — building something real together
                     </p>
                   </Motion.div>
                 </div>
               </div>
             </Motion.div>
 
-            {/* Feature Grid with enhanced animations */}
+            {/* Feature Grid with simplified animations */}
             <Motion.div 
               variants={containerVariants}
               className="grid grid-cols-2 gap-4"
@@ -191,12 +220,9 @@ const About = () => {
                   transition={{ duration: 0.3, ease: "easeOut" }}
                   className="bg-white rounded-xl p-6 shadow-lg border border-neutral-100 cursor-pointer group"
                 >
-                  <Motion.div
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    <feature.icon className="w-8 h-8 text-emerald-600 mb-4 group-hover:text-emerald-500 transition-colors duration-300" />
-                  </Motion.div>
+                  <div className="mb-4">
+                    <feature.icon className="w-8 h-8 text-emerald-600 group-hover:text-emerald-500 transition-colors duration-300" />
+                  </div>
                   <h4 className="font-bold text-neutral-900 mb-2 text-sm group-hover:text-emerald-800 transition-colors duration-300">{feature.title}</h4>
                   <p className="text-neutral-600 text-xs leading-relaxed">{feature.description}</p>
                 </Motion.div>

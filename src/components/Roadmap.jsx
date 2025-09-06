@@ -9,37 +9,37 @@ import {
 const Roadmap = () => {
   const phases = [
     {
-      title: 'Q3 2025',
-      subtitle: 'Foundation & Launch',
+      title: 'Phase 1',
+      subtitle: 'Bonding Curve Launch',
       items: [
-        'Platform launch on Solana mainnet',
-        'Professional brand identity deployment',
-        'Strategic marketing campaign initiation',
-        'DEX listing and analytics integration'
+        'Launch via Pump.fun to capture momentum',
+        'Community building and social push',
+        'Clear messaging: strength • knowledge • kindness',
+        'Track analytics and gather feedback'
       ],
       status: 'current',
       icon: PlayCircleIcon
     },
     {
-      title: 'Q4 2025',
-      subtitle: 'Growth & Expansion',
+      title: 'Phase 2',
+      subtitle: 'Brand & Utility',
       items: [
-        'Liquidity enhancement partnerships',
-        'Premium NFT collection release',
-        'Community merchandise platform',
-        'Treasury governance implementation'
+        'Once LP forms on Raydium → shift to stronger branding',
+        'Whitepaper, mascot, and identity polish',
+        'Simple tools/education for the community',
+        'Transparent treasury updates'
       ],
       status: 'upcoming',
       icon: ClockIcon
     },
     {
-      title: 'Q1 2026',
-      subtitle: 'Ecosystem & Innovation',
+      title: 'Phase 3',
+      subtitle: 'Scale & Options',
       items: [
-        'DAO governance infrastructure',
-        'Advanced utility suite deployment',
-        'Cross-chain integration capabilities',
-        'Strategic ecosystem partnerships'
+        'Consider launchpad/DEX expansion when ready',
+        'Explore staking, community tools, or other utilities',
+        'Partnerships that match community values',
+        'Iterate based on what the community loves'
       ],
       status: 'upcoming',
       icon: ClockIcon
@@ -70,7 +70,7 @@ const Roadmap = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-emerald-600 to-emerald-400 mx-auto mb-8 rounded-full"></div>
           <p className="text-xl md:text-2xl max-w-4xl mx-auto text-neutral-600 leading-relaxed">
-            Our systematic approach to building sustainable value and ecosystem growth
+            Our simple approach to building value and community growth
           </p>
         </Motion.div>
         

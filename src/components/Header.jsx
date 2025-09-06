@@ -75,17 +75,19 @@ const Header = () => {
             >
               <FaTelegram className="text-neutral-700 group-hover:text-emerald-600 text-sm transition-colors duration-300" />
             </Motion.a>
-            <Motion.a 
-              href={SOS.links.discord || '#'} 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2.5 rounded-xl bg-neutral-100/80 hover:bg-emerald-100 transition-all duration-300 hover:scale-110 active:scale-95 group"
-              aria-label="Discord"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FaDiscord className="text-neutral-700 group-hover:text-emerald-600 text-sm transition-colors duration-300" />
-            </Motion.a>
+            {SOS.links.discord && (
+              <Motion.a 
+                href={SOS.links.discord} 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 rounded-xl bg-neutral-100/80 hover:bg-emerald-100 transition-all duration-300 hover:scale-110 active:scale-95 group"
+                aria-label="Discord"
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaDiscord className="text-neutral-700 group-hover:text-emerald-600 text-sm transition-colors duration-300" />
+              </Motion.a>
+            )}
             {SOS.links.tiktok && (
               <Motion.a 
                 href={SOS.links.tiktok} 

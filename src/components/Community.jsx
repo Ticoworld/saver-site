@@ -18,12 +18,12 @@ const Community = () => {
       href: SOS.links.telegram || '#',
       description: 'Community discussions and support'
     },
-    { 
+    ...(SOS.links.discord ? [{ 
       name: 'Discord', 
       icon: <FaDiscord />, 
-      href: SOS.links.discord || '#',
+      href: SOS.links.discord,
       description: 'Real-time chat and governance'
-    },
+    }] : []),
     { 
       name: 'TikTok', 
       icon: <FaTiktok />, 
@@ -35,8 +35,8 @@ const Community = () => {
   const stats = [
     {
       icon: UserGroupIcon,
-      title: 'Professional Team',
-      description: 'Experienced developers, marketers, and designers'
+      title: 'Friendly Team',
+      description: 'Real people who care about building something good together'
     },
     {
       icon: ChatBubbleLeftRightIcon,
@@ -46,7 +46,7 @@ const Community = () => {
     {
       icon: GlobeAltIcon,
       title: 'Global Reach',
-      description: 'Building bridges across the Solana ecosystem'
+      description: 'Building connections across the Solana community'
     }
   ];
 
@@ -125,8 +125,8 @@ const Community = () => {
             variants={itemVariants}
             className="text-xl md:text-2xl max-w-4xl mx-auto text-neutral-600 leading-relaxed"
           >
-            Join a professional community of builders, innovators, and visionaries 
-            shaping the future of decentralized finance on Solana.
+            Join a welcoming community of builders, creators, and friends 
+            who are growing together on Solana.
           </Motion.p>
         </Motion.div>
 
@@ -150,11 +150,6 @@ const Community = () => {
               className="text-center group cursor-pointer"
             >
               <Motion.div 
-                whileHover={{ 
-                  rotate: [0, -5, 5, -5, 0],
-                  scale: 1.1
-                }}
-                transition={{ duration: 0.6 }}
                 className="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl"
               >
                 <stat.icon className="w-8 h-8 text-white" />
@@ -191,11 +186,6 @@ const Community = () => {
               <div className="absolute -inset-px bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative bg-white rounded-2xl p-6 shadow-lg border border-neutral-100 h-full flex flex-col">
                 <Motion.div 
-                  whileHover={{ 
-                    rotate: 360,
-                    scale: 1.2
-                  }}
-                  transition={{ duration: 0.6 }}
                   className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-xl text-white text-xl shadow-lg"
                 >
                   {channel.icon}
@@ -249,8 +239,8 @@ const Community = () => {
                 transition={{ delay: 0.8, duration: 0.6 }}
                 className="text-xl mb-8 text-emerald-100 leading-relaxed"
               >
-                Join thousands of community members who are shaping the next generation 
-                of decentralized finance infrastructure on Solana.
+                Join thousands of community members who are learning and growing together 
+                in a positive, supportive environment.
               </Motion.p>
               <Motion.div 
                 initial={{ opacity: 0, y: 20 }}
@@ -266,14 +256,16 @@ const Community = () => {
                 >
                   Join Telegram
                 </Motion.a>
-                <Motion.a
-                  href={SOS.links.discord || '#'}
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="border-2 border-white text-white px-8 py-3 rounded-xl font-bold hover:bg-white hover:text-emerald-700 transition-colors inline-flex items-center justify-center"
-                >
-                  Join Discord
-                </Motion.a>
+                {SOS.links.discord && (
+                  <Motion.a
+                    href={SOS.links.discord}
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-white text-white px-8 py-3 rounded-xl font-bold hover:bg-white hover:text-emerald-700 transition-colors inline-flex items-center justify-center"
+                  >
+                    Join Discord
+                  </Motion.a>
+                )}
               </Motion.div>
             </div>
           </Motion.div>

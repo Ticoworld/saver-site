@@ -5,10 +5,10 @@ const Loader = ({ onLoadComplete }) => {
   const [currentMessage, setCurrentMessage] = useState(0);
   
   const messages = [
-    "SOS: Securing your experience...",
-    "Connecting to Solana network...",
-    "Loading Saver ecosystem...",
-    "Preparing for launch..."
+    "SAVER on SOL is getting ready...",
+    "Warming up the Dino signal...",
+    "Loading community vibes...",
+    "Almost there — welcome to $SOS"
   ];
 
   useEffect(() => {

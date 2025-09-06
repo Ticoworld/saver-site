@@ -34,7 +34,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-white/80 leading-relaxed text-lg">
-              Professional community-driven token on Solana. Building sustainable value through innovation and transparency.
+              SAVER on SOL is a community-first movement on Solana. We stand for strength, learning, and kindness — building together with transparency.
             </p>
           </div>
 
@@ -92,15 +92,17 @@ const Footer = () => {
                   >
                     <FaTelegram className="text-xl" />
                   </a>
-                  <a
-                    href={SOS.links.discord || '#'}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white/10 p-3 rounded-xl hover:bg-emerald-600/20 transition-all duration-300 hover:scale-110"
-                    aria-label="Discord"
-                  >
-                    <FaDiscord className="text-xl" />
-                  </a>
+                  {SOS.links.discord && (
+                    <a
+                      href={SOS.links.discord}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white/10 p-3 rounded-xl hover:bg-emerald-600/20 transition-all duration-300 hover:scale-110"
+                      aria-label="Discord"
+                    >
+                      <FaDiscord className="text-xl" />
+                    </a>
+                  )}
                   {SOS.links.tiktok && (
                     <a
                       href={SOS.links.tiktok}

@@ -11,9 +11,11 @@ const SOS = {
   // External links (set when available)
   links: {
     website: 'https://www.savercoin.info/',
-    twitter: 'https://x.com/SAVERCOIN1',
-    telegram: 'https://t.me/savercoin1',
-    discord: 'https://discord.com/invite/jYdn3C8t4G',
+  // Updated per owner request
+  twitter: 'https://x.com/saveronsol',
+  telegram: 'https://t.me/+zWCRDcdoIplhNWY8',
+  // No Discord yet
+  discord: null,
     tiktok: 'https://www.tiktok.com/@saveronsol',
     github: 'https://github.com/Ticoworld/saver-site',
     // Set these when launched

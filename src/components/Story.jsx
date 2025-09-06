@@ -1,29 +1,29 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
 import { 
-  ShieldCheckIcon, 
-  UsersIcon, 
-  RocketLaunchIcon 
+  FireIcon,
+  AcademicCapIcon,
+  UsersIcon
 } from '@heroicons/react/24/outline';
 
 const Story = () => {
   const values = [
     { 
-      title: 'Security First', 
-      description: 'Multi-layered protection protocols and institutional-grade security measures.',
-      icon: ShieldCheckIcon,
+      title: 'Strength', 
+      description: 'Like Dino at the gym. Preparation, discipline, and building each other up.',
+      icon: FireIcon,
       gradient: 'from-emerald-500 to-teal-500'
     },
     { 
-      title: 'Community Driven', 
-      description: 'Collaborative governance model where every voice contributes to ecosystem growth.',
-      icon: UsersIcon,
+      title: 'Knowledge', 
+      description: 'Always learning, sharing, and growing together as a community.',
+      icon: AcademicCapIcon,
       gradient: 'from-blue-500 to-indigo-500'
     },
     { 
-      title: 'Innovation Focus', 
-      description: 'Cutting-edge DeFi solutions designed for sustainable long-term value creation.',
-      icon: RocketLaunchIcon,
+      title: 'Community', 
+      description: 'Helping friends, welcoming newcomers, and leading with kindness.',
+      icon: UsersIcon,
       gradient: 'from-purple-500 to-violet-500'
     },
   ];
@@ -118,7 +118,7 @@ const Story = () => {
             variants={itemVariants}
             className="text-5xl md:text-6xl font-display font-bold mb-8 text-neutral-900"
           >
-            Built on <span className="text-emerald-600">Excellence</span>
+            Built on <span className="text-emerald-600">Mindset</span>
           </Motion.h2>
           <Motion.div 
             variants={itemVariants}
@@ -128,9 +128,8 @@ const Story = () => {
             variants={itemVariants}
             className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed text-neutral-600"
           >
-            SAVER ON SOL represents a paradigm shift in community-driven tokenomics. 
-            We combine institutional-grade infrastructure with transparent governance 
-            to create sustainable value for our ecosystem.
+            In $SOS, the Dino stands for strength, learning, and kindness. We start simple and grow together — 
+            adding more as the community and brand mature.
           </Motion.p>
         </Motion.div>
 
@@ -166,11 +165,10 @@ const Story = () => {
                   className="absolute bottom-8 left-8 right-8"
                 >
                   <h3 className="text-white text-2xl md:text-3xl font-display font-bold mb-4">
-                    Professional Infrastructure
+                    The SAVER Lifestyle
                   </h3>
                   <p className="text-neutral-200 text-lg max-w-2xl">
-                    Our platform combines enterprise-level security with innovative 
-                    DeFi mechanisms, creating a foundation for sustainable growth.
+                    Strength like Dino at the gym. Knowledge through constant learning. Community through kindness.
                   </p>
                 </Motion.div>
               </div>
@@ -201,11 +199,6 @@ const Story = () => {
               <div className="absolute -inset-px bg-gradient-to-r from-neutral-200 to-neutral-300 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative bg-white rounded-2xl p-8 shadow-lg border border-neutral-100 group-hover:shadow-2xl transition-all duration-500 h-full">
                 <Motion.div 
-                  whileHover={{ 
-                    rotate: [0, -10, 10, -10, 0],
-                    scale: 1.1
-                  }}
-                  transition={{ duration: 0.6 }}
                   className={`w-16 h-16 rounded-xl bg-gradient-to-r ${value.gradient} flex items-center justify-center mb-6 shadow-lg relative`}
                 >
                   <value.icon className="w-8 h-8 text-white" />
