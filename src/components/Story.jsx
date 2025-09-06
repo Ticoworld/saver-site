@@ -5,6 +5,9 @@ import {
   AcademicCapIcon,
   UsersIcon
 } from '@heroicons/react/24/outline';
+import DinoBackground from './DinoBackground';
+import SectionReveal from './SectionReveal';
+import ScrollParallax from './ScrollParallax';
 
 const Story = () => {
   const values = [
@@ -71,6 +74,14 @@ const Story = () => {
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }}></div>
       </div>
+
+      {/* Enhanced Dino backgrounds with parallax */}
+      <ScrollParallax speed={0.4}>
+        <DinoBackground className="top-16 right-12" size="medium" opacity={0.04} />
+      </ScrollParallax>
+      <ScrollParallax speed={-0.3}>
+        <DinoBackground className="bottom-20 left-16" size="large" opacity={0.03} />
+      </ScrollParallax>
 
       {/* Floating elements */}
       <Motion.div

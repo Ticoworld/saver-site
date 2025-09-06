@@ -9,6 +9,9 @@ import {
   AcademicCapIcon,
   HeartIcon
 } from '@heroicons/react/24/outline';
+import DinoBackground from './DinoBackground';
+import SectionReveal from './SectionReveal';
+import ScrollParallax from './ScrollParallax';
 
 const About = () => {
   const features = [
@@ -61,6 +64,15 @@ const About = () => {
   return (
     <section id="about" className="py-24 bg-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/50 to-neutral-50/30"></div>
+      
+      {/* Enhanced floating Dino backgrounds with parallax */}
+      <ScrollParallax speed={0.4}>
+        <DinoBackground className="top-32 right-20" size="large" opacity={0.03} />
+      </ScrollParallax>
+      
+      <ScrollParallax speed={-0.2}>
+        <DinoBackground className="bottom-40 left-16" size="medium" opacity={0.04} />
+      </ScrollParallax>
       
       {/* Floating background elements */}
       <Motion.div

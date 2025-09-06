@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
 import SOS from '../config/sos';
+import DinoBackground from './DinoBackground';
+import ScrollParallax from './ScrollParallax';
 
 const Hero = () => {
   // Advanced animation variants
@@ -99,6 +101,14 @@ const Hero = () => {
           className="absolute bottom-20 left-20 w-64 h-64 bg-emerald-400/20 rounded-full blur-2xl"
         />
       </div>
+      
+      {/* Parallax Dino backgrounds */}
+      <ScrollParallax speed={0.6}>
+        <DinoBackground className="top-1/4 left-20" size="large" opacity={0.02} />
+      </ScrollParallax>
+      <ScrollParallax speed={-0.4}>
+        <DinoBackground className="bottom-1/3 right-24" size="medium" opacity={0.03} />
+      </ScrollParallax>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto text-center">
