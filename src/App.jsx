@@ -7,6 +7,7 @@ import { usePerformanceMonitor } from './utils/performance';
 
 // Lazy load components for code splitting
 const HomePage = lazy(() => import('../pages/HomePage'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 // const LeaderboardPage = lazy(() => import('./components/Leaderboard/LeaderboardPage'));
 
 function App() {
@@ -78,6 +79,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             {/** Leaderboard temporarily disabled per rebrand **/}
             {/** <Route path="/leaderboard" element={<LeaderboardPage />} /> **/}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
