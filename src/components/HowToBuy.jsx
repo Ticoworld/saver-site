@@ -97,7 +97,7 @@ const HowToBuy = () => {
                 rel="noopener noreferrer"
                 className="inline-block bg-white text-emerald-700 px-8 py-3 rounded-xl font-bold shadow-lg hover:bg-neutral-100 transition-colors"
               >
-                Open Pump.fun
+                Buy on Pump.fun
               </a>
             </Motion.div>
           )}
@@ -113,18 +113,28 @@ const HowToBuy = () => {
             <p className="mb-6 text-neutral-300 leading-relaxed">
               Monitor price and trading volume on analytics platforms
             </p>
-            {SOS.links.dexscreener ? (
-              <a 
-                href={SOS.links.dexscreener}
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-block bg-white text-neutral-800 px-8 py-3 rounded-xl font-bold shadow-lg hover:bg-neutral-100 transition-colors"
-              >
-                View Analytics
-              </a>
-            ) : (
-              <span className="inline-block bg-white/80 text-neutral-700 px-8 py-3 rounded-xl font-bold shadow-lg opacity-80">Available at Launch</span>
-            )}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              {SOS.links.dexscreener && (
+                <a 
+                  href={SOS.links.dexscreener}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block bg-white text-neutral-800 px-6 py-3 rounded-xl font-bold shadow-lg hover:bg-neutral-100 transition-colors"
+                >
+                  Dexscreener
+                </a>
+              )}
+              {SOS.links.geckoTerminal && (
+                <a 
+                  href={SOS.links.geckoTerminal}
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block bg-purple-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg hover:bg-purple-500 transition-colors"
+                >
+                  GeckoTerminal
+                </a>
+              )}
+            </div>
           </Motion.div>
         </div>
       </div>

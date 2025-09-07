@@ -36,6 +36,28 @@ const Footer = () => {
             <p className="text-white/80 leading-relaxed text-lg">
               SAVER on SOL is a community-first movement on Solana. We stand for strength, learning, and kindness — building together with transparency.
             </p>
+
+            {/* Quick actions */}
+            <div className="mt-6 flex flex-col sm:flex-row gap-3">
+              {SOS.links.pumpFun && (
+                <a
+                  href={SOS.links.pumpFun}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-white font-semibold shadow"
+                >
+                  Buy on Pump.fun
+                </a>
+              )}
+              {SOS.contractAddress && (
+                <button
+                  onClick={() => navigator.clipboard.writeText(SOS.contractAddress)}
+                  className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold border border-white/20"
+                >
+                  Copy Address
+                </button>
+              )}
+            </div>
           </div>
 
           {/* Links & Social Section */}

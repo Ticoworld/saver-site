@@ -213,7 +213,7 @@ const Hero = () => {
                   }}
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"
                 />
-                <span className="relative z-10">Launch Trading</span>
+                <span className="relative z-10">Buy on Pump.fun</span>
               </Motion.a>
             ) : (
               <Motion.button
@@ -252,6 +252,89 @@ const Hero = () => {
                 Contract Soon
               </Motion.button>
             )}
+          </Motion.div>
+
+          {/* Quick copy address below CTAs */}
+          {SOS.contractAddress && (
+            <Motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 2.6 }}
+              className="max-w-3xl mx-auto mb-16"
+            >
+              <div className="text-neutral-300 text-sm mb-2">Contract Address</div>
+              <div className="bg-white/10 border border-white/20 rounded-xl p-3 backdrop-blur-sm">
+                <div className="flex items-center justify-between gap-2">
+                  <code className="text-emerald-300 font-mono text-xs sm:text-sm truncate">{SOS.contractAddress}</code>
+                  <button
+                    onClick={() => navigator.clipboard.writeText(SOS.contractAddress)}
+                    className="px-3 py-1.5 text-xs rounded-lg bg-emerald-500 text-white hover:bg-emerald-400 transition-colors"
+                    aria-label="Copy contract address"
+                  >
+                    Copy
+                  </button>
+                </div>
+              </div>
+            </Motion.div>
+          )}
+
+          {/* Available Now Section */}
+          <Motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 2.8 }}
+            className="max-w-5xl mx-auto"
+          >
+            <div className="text-center mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Available Now On</h3>
+              <div className="w-16 h-1 bg-emerald-400 mx-auto mb-6"></div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 gap-y-3 mb-8">
+              {/* Pump.fun */}
+              {SOS.links.pumpFun && (
+                <Motion.a
+                  href={SOS.links.pumpFun}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05, y: -3 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-gradient-to-r from-emerald-600 to-emerald-700 text-white p-6 rounded-xl text-center shadow-xl hover:shadow-2xl transition-all group"
+                >
+                  <div className="text-xl font-bold mb-2">Buy on Pump.fun</div>
+                  <div className="text-emerald-100 text-sm">Trade directly</div>
+                </Motion.a>
+              )}
+              
+              {/* Dexscreener */}
+              {SOS.links.dexscreener && (
+                <Motion.a
+                  href={SOS.links.dexscreener}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05, y: -3 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6 rounded-xl text-center shadow-xl hover:shadow-2xl transition-all group"
+                >
+                  <div className="text-xl font-bold mb-2">Dexscreener Chart</div>
+                  <div className="text-blue-100 text-sm">View price & volume</div>
+                </Motion.a>
+              )}
+              
+              {/* GeckoTerminal */}
+              {SOS.links.geckoTerminal && (
+                <Motion.a
+                  href={SOS.links.geckoTerminal}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05, y: -3 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-gradient-to-r from-purple-600 to-purple-700 text-white p-6 rounded-xl text-center shadow-xl hover:shadow-2xl transition-all group"
+                >
+                  <div className="text-xl font-bold mb-2">GeckoTerminal Chart</div>
+                  <div className="text-purple-100 text-sm">Advanced analytics</div>
+                </Motion.a>
+              )}
+            </div>
           </Motion.div>
 
           {/* Enhanced stats grid with 3D cards */}
