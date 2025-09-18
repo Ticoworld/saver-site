@@ -10,11 +10,11 @@ const Roadmap = () => {
   const phases = [
     {
       title: 'Phase 1',
-      subtitle: 'Bonding Curve Launch',
+      subtitle: 'Revenue Share Launch',
       items: [
-        'Launch via Pump.fun to capture momentum',
+        'Launch with community revenue share and rewards',
         'Community building and social push',
-        'Clear messaging: strength • knowledge • kindness',
+        'Clear messaging: strength 2 knowledge 2 kindness',
         'Track analytics and gather feedback'
       ],
       status: 'current',

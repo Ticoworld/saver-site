@@ -190,42 +190,6 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 2.4, ease: "easeOut" }}
             className="flex flex-col sm:flex-row gap-6 justify-center mb-20"
           >
-            {SOS.links.pumpFun ? (
-              <Motion.a
-                href={SOS.links.pumpFun}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ 
-                  scale: 1.05,
-                  y: -3,
-                  boxShadow: "0 20px 40px rgba(16, 185, 129, 0.4)"
-                }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ duration: 0.2 }}
-                className="relative bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-12 py-5 rounded-xl font-bold text-lg shadow-2xl hover:shadow-emerald-500/50 transition-all inline-flex items-center justify-center group overflow-hidden"
-              >
-                <Motion.div
-                  animate={{ x: [-200, 200] }}
-                  transition={{ 
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "linear"
-                  }}
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"
-                />
-                <span className="relative z-10">Buy on Pump.fun</span>
-              </Motion.a>
-            ) : (
-              <Motion.button
-                whileHover={{ scale: 1.02, y: -2 }}
-                transition={{ duration: 0.2 }}
-                className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-12 py-5 rounded-xl font-bold text-lg shadow-2xl cursor-not-allowed opacity-80 inline-flex items-center justify-center"
-                title="Launching soon"
-              >
-                Launching Soon
-              </Motion.button>
-            )}
-            
             {SOS.links.solscan ? (
               <Motion.a
                 href={SOS.links.solscan}
@@ -290,20 +254,7 @@ const Hero = () => {
               <div className="w-16 h-1 bg-emerald-400 mx-auto mb-6"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 gap-y-3 mb-8">
-              {/* Pump.fun */}
-              {SOS.links.pumpFun && (
-                <Motion.a
-                  href={SOS.links.pumpFun}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.05, y: -3 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-emerald-600 to-emerald-700 text-white p-6 rounded-xl text-center shadow-xl hover:shadow-2xl transition-all group"
-                >
-                  <div className="text-xl font-bold mb-2">Buy on Pump.fun</div>
-                  <div className="text-emerald-100 text-sm">Trade directly</div>
-                </Motion.a>
-              )}
+              {/* Pump.fun removed for rev share launch */}
               
               {/* Dexscreener */}
               {SOS.links.dexscreener && (
@@ -344,7 +295,7 @@ const Hero = () => {
             variants={statsVariants}
             className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto"
           >
-            {[
+            {[ 
               { value: "1B", label: "Total Supply" },
               { value: "6%", label: "Transfer Tax" },
               { value: "100%", label: "Community Owned" }

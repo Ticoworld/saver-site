@@ -12,11 +12,10 @@ const Tokenomics = () => {
   ];
 
   const features = [
-    'Fair Launch on Pump.fun (no presale, no pre-mint)',
+    'Phase 1: Revenue Share – trading fees are distributed to holders and devs',
     '100% of tokens enter the liquidity pool at launch',
     '6% Transfer Tax supporting rewards and development',
     'No Dev Wallets – team only owns what they buy',
-    'Community Treasury will be created post-launch',
     'Transparent, community-driven usage of treasury',
   ];
 

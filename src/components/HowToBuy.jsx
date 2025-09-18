@@ -22,8 +22,8 @@ const HowToBuy = () => {
     },
     {
       icon: ArrowsRightLeftIcon,
-      title: 'Join the Fair Launch',
-      description: 'We launch on Pump.fun. Buy and join the community.'
+      title: 'Revenue Share Launch',
+      description: 'Launch with community revenue share. Join and earn rewards.'
     },
     {
       icon: LinkIcon,
@@ -79,28 +79,7 @@ const HowToBuy = () => {
         </div>
         
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {SOS.links.pumpFun && (
-            <Motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-2xl p-8 text-center text-white shadow-xl"
-            >
-              <h3 className="text-2xl font-bold mb-4">Fair Launch Platform</h3>
-              <p className="mb-6 text-emerald-100 leading-relaxed">
-                Transparent, community-first launch. No presale, no team allocations.
-              </p>
-              <a 
-                href={SOS.links.pumpFun}
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-block bg-white text-emerald-700 px-8 py-3 rounded-xl font-bold shadow-lg hover:bg-neutral-100 transition-colors"
-              >
-                Buy on Pump.fun
-              </a>
-            </Motion.div>
-          )}
+          {/* Pump.fun launch section removed for rev share launch */}
 
           <Motion.div
             initial={{ opacity: 0, scale: 0.95 }}

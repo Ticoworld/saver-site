@@ -39,16 +39,7 @@ const Footer = () => {
 
             {/* Quick actions */}
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              {SOS.links.pumpFun && (
-                <a
-                  href={SOS.links.pumpFun}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-white font-semibold shadow"
-                >
-                  Buy on Pump.fun
-                </a>
-              )}
+              {/* Pump.fun CTA removed for rev share launch */}
               {SOS.contractAddress && (
                 <button
                   onClick={() => navigator.clipboard.writeText(SOS.contractAddress)}

@@ -103,20 +103,7 @@ const Header = () => {
             )}
           </Motion.div>
 
-          {/* Quick Pump.fun CTA */}
-          {SOS.links.pumpFun && (
-            <Motion.a
-              href={SOS.links.pumpFun}
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3, ease: 'easeOut' }}
-              className="hidden sm:inline-flex items-center px-3 py-2 rounded-lg bg-emerald-500 text-white text-sm font-semibold hover:bg-emerald-400 shadow"
-            >
-              Buy on Pump.fun
-            </Motion.a>
-          )}
+          {/* Pump.fun CTA removed for rev share launch */}
         </div>
       </div>
     </header>
