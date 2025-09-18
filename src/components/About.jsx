@@ -22,8 +22,8 @@ const About = () => {
     },
     {
       icon: CurrencyDollarIcon,
-      title: 'Zero Tax',
-      description: 'No transaction fees to maximize holder value'
+      title: 'Sustainable Tax',
+      description: '6% transfer tax powers rewards and development'
     },
     {
       icon: UsersIcon,

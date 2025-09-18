@@ -8,6 +8,8 @@ const SOS = {
   supply: '1,000,000,000',
   // Will be provided after launch
   contractAddress: 'CDzCp6fTS7K9pYZ1JEDb4ZpQ4B85BTqke9Kcmwpp5q3S',
+  // Rewards distributor program address (for holder rewards)
+  distributorAddress: '2LYQCUMe5bouHB6WgtneyLxcQNnnMu4Vdut5oFLkHP75',
   // External links (set when available)
   links: {
     website: 'https://www.savercoin.info/',

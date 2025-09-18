@@ -173,13 +173,13 @@ const Hero = () => {
                 community-driven growth
               </Motion.span>
             </Motion.p>
-            <Motion.p 
+      <Motion.p 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 2, duration: 0.8 }}
-              className="text-lg text-emerald-400 font-medium"
+                className="text-lg text-emerald-400 font-medium"
             >
-              $SOS • Memecoin Revolution
+        Get rewards when you hold $SOS
             </Motion.p>
           </Motion.div>
 
@@ -346,7 +346,7 @@ const Hero = () => {
           >
             {[
               { value: "1B", label: "Total Supply" },
-              { value: "0%", label: "Transaction Tax" },
+              { value: "6%", label: "Transfer Tax" },
               { value: "100%", label: "Community Owned" }
             ].map((stat, index) => (
               <Motion.div
