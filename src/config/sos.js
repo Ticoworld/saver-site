@@ -7,7 +7,7 @@ const SOS = {
   network: 'Solana',
   supply: '1,000,000,000',
   // Will be provided after launch
-  contractAddress: 'JD8FzFN2Z5AMaqxrB2q5aGKknVu5s1VSKU4VkCYQpump',
+  contractAddress: 'CDzCp6fTS7K9pYZ1JEDb4ZpQ4B85BTqke9Kcmwpp5q3S',
   // External links (set when available)
   links: {
     website: 'https://www.savercoin.info/',
@@ -19,10 +19,10 @@ const SOS = {
     tiktok: 'https://www.tiktok.com/@saveronsol',
     github: 'https://github.com/Ticoworld/saver-site',
   // Set these when launched
-  pumpFun: 'https://pump.fun/coin/JD8FzFN2Z5AMaqxrB2q5aGKknVu5s1VSKU4VkCYQpump',
-    dexscreener: 'https://dexscreener.com/solana/JD8FzFN2Z5AMaqxrB2q5aGKknVu5s1VSKU4VkCYQpump',
-    geckoTerminal: 'https://www.geckoterminal.com/solana/pools/HcivS1icYj7pkrUp8xvaRuKFzVbxA4ywCmYEUFh2EoMX',
-    solscan: 'https://solscan.io/token/JD8FzFN2Z5AMaqxrB2q5aGKknVu5s1VSKU4VkCYQpump',
+  pumpFun: null,
+    dexscreener: null,
+    geckoTerminal: null,
+    solscan: 'https://solscan.io/token/CDzCp6fTS7K9pYZ1JEDb4ZpQ4B85BTqke9Kcmwpp5q3S',
   },
 };
 
