@@ -29,7 +29,7 @@ const Header = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-emerald-400 rounded-xl opacity-0 group-hover:opacity-100 blur transition-all duration-300"></div>
               <img 
                 src="/logo.jpg" 
-                alt="SAVER ON SOL" 
+                alt="SAVER ON BSC" 
                 className="relative w-12 h-12 rounded-xl object-cover border-2 border-emerald-200 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110"
                 loading="eager"
                 decoding="async"
@@ -38,9 +38,9 @@ const Header = () => {
             <div className="hidden sm:block">
               <h1 className="text-xl font-display font-bold text-neutral-900 leading-tight group-hover:text-emerald-600 transition-colors duration-300">
                 SAVER ON{' '}
-                <span className="text-emerald-600 group-hover:text-emerald-500">SOL</span>
+                <span className="text-emerald-600 group-hover:text-emerald-500">BSC</span>
               </h1>
-              <div className="text-xs text-neutral-500 font-medium">$SOS • Memecoin Revolution</div>
+              <div className="text-xs text-neutral-500 font-medium">$SOS • Built for BSC explorers</div>
             </div>
           </Link>
         </Motion.div>
@@ -103,7 +103,7 @@ const Header = () => {
             )}
           </Motion.div>
 
-          {/* Pump.fun CTA removed for rev share launch */}
+          {/* Pump.fun CTA intentionally omitted for BSC launch */}
         </div>
       </div>
     </header>

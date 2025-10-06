@@ -22,8 +22,8 @@ const About = () => {
     },
     {
       icon: CurrencyDollarIcon,
-      title: 'Sustainable Tax',
-      description: '6% transfer tax powers rewards and development'
+      title: '0% Tax',
+      description: 'Simple structure — no buy or sell fees on BSC'
     },
     {
       icon: UsersIcon,
@@ -32,8 +32,8 @@ const About = () => {
     },
     {
       icon: ChartBarIcon,
-      title: 'Simple Start',
-      description: 'Story and community first, then utilities as we mature'
+      title: 'Builder Friendly',
+      description: 'Story and community first — utilities follow as we mature'
     }
   ];
 
@@ -108,7 +108,7 @@ const About = () => {
               variants={itemVariants}
               className="text-4xl md:text-5xl font-display font-bold mb-8 text-neutral-900"
             >
-              The Story of <span className="text-emerald-600">SAVER on SOL</span>
+              The Story of <span className="text-emerald-600">SAVER on BSC</span>
             </Motion.h2>
             
             <Motion.div 
@@ -116,7 +116,7 @@ const About = () => {
               className="space-y-6 text-lg text-neutral-600 leading-relaxed mb-12"
             >
               <p>
-                In a world full of noise and quick flips, SAVER on SOL ($SOS) was created with a simple mission: 
+                In a world full of noise and quick flips, SAVER on BSC ($SOS) was created with a simple mission: 
                 bring purpose, discipline, and strength back into crypto culture.
               </p>
               <p>

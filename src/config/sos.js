@@ -1,30 +1,24 @@
-// Central config for $SAVER ON SOL ($SOS)
-// Fill in contract and links after launch.
+// Central config for $SAVER ON BSC ($SOS)
+// Update contract and external links as the project evolves.
 
 const SOS = {
-  name: 'SAVER ON SOL',
+  name: 'SAVER ON BSC',
   ticker: '$SOS',
-  network: 'Solana',
+  network: 'BNB Smart Chain (BSC)',
   supply: '1,000,000,000',
-  // Will be provided after launch
-  contractAddress: 'CDzCp6fTS7K9pYZ1JEDb4ZpQ4B85BTqke9Kcmwpp5q3S',
-  // Rewards distributor program address (for holder rewards)
-  distributorAddress: '2LYQCUMe5bouHB6WgtneyLxcQNnnMu4Vdut5oFLkHP75',
+  contractAddress: '0xD2bDf8d84a9d8c77DA58385582f706e1Eb894444',
   // External links (set when available)
   links: {
     website: 'https://www.savercoin.info/',
-  // Updated per owner request
-  twitter: 'https://x.com/saveronsol',
-  telegram: 'https://t.me/+zWCRDcdoIplhNWY8',
-  // No Discord yet
-  discord: null,
+    // Socials remain the same handles
+    twitter: 'https://x.com/saveronsol',
+    telegram: 'https://t.me/+zWCRDcdoIplhNWY8',
+    discord: null,
     tiktok: 'https://www.tiktok.com/@saveronsol',
     github: 'https://github.com/Ticoworld/saver-site',
-  // Set these when launched
-  pumpFun: null,
     dexscreener: null,
     geckoTerminal: null,
-    solscan: 'https://solscan.io/token/CDzCp6fTS7K9pYZ1JEDb4ZpQ4B85BTqke9Kcmwpp5q3S',
+    bscscan: 'https://bscscan.com/token/0xD2bDf8d84a9d8c77DA58385582f706e1Eb894444',
   },
 };
 

@@ -21,25 +21,25 @@ const Footer = () => {
             <div className="flex items-center space-x-4 mb-6">
               <img 
                 src="/logo.jpg" 
-                alt="SAVER ON SOL" 
+                alt="SAVER ON BSC" 
                 className="w-14 h-14 rounded-xl object-cover ring-2 ring-emerald-400/30 shadow-lg"
                 loading="lazy"
                 decoding="async"
               />
               <div>
                 <h2 className="text-2xl font-bold">
-                  SAVER ON <span className="solana-text-gradient">SOL</span>
+                  SAVER ON <span className="bsc-text-gradient">BSC</span>
                 </h2>
                 <p className="text-emerald-400 text-sm font-medium">$SOS</p>
               </div>
             </div>
             <p className="text-white/80 leading-relaxed text-lg">
-              SAVER on SOL is a community-first movement on Solana. We stand for strength, learning, and kindness — building together with transparency.
+              SAVER on BSC is a community-first movement on the BNB Smart Chain. We stand for strength, learning, and kindness — building together with transparency.
             </p>
 
             {/* Quick actions */}
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              {/* Pump.fun CTA removed for rev share launch */}
+              {/* Pump.fun CTA intentionally omitted for BSC launch */}
               {SOS.contractAddress && (
                 <button
                   onClick={() => navigator.clipboard.writeText(SOS.contractAddress)}
@@ -144,7 +144,7 @@ const Footer = () => {
             <div className="mt-12 pt-8 border-t border-white/10">
               <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
                 <p className="text-white/70 text-base">
-                  © {currentYear} SAVER ON SOL ($SOS). All rights reserved.
+                  © {currentYear} SAVER ON BSC ($SOS). All rights reserved.
                 </p>
                 <div className="flex items-center space-x-4 text-sm text-white/50">
                   <a href="#" className="hover:text-white/70 transition-colors">Privacy</a>

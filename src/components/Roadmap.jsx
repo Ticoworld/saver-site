@@ -10,11 +10,11 @@ const Roadmap = () => {
   const phases = [
     {
       title: 'Phase 1',
-      subtitle: 'Revenue Share Launch',
+      subtitle: 'BSC Launch',
       items: [
-        'Launch with community revenue share and rewards',
+        'Launch on BSC with a clean 0% tax structure',
         'Community building and social push',
-        'Clear messaging: strength 2 knowledge 2 kindness',
+        'Clear messaging: strength • knowledge • kindness',
         'Track analytics and gather feedback'
       ],
       status: 'current',
@@ -24,7 +24,7 @@ const Roadmap = () => {
       title: 'Phase 2',
       subtitle: 'Brand & Utility',
       items: [
-        'Once LP forms on Raydium → shift to stronger branding',
+        'Once LP forms on PancakeSwap → shift to stronger branding',
         'Whitepaper, mascot, and identity polish',
         'Simple tools/education for the community',
         'Transparent treasury updates'
@@ -120,7 +120,6 @@ const Roadmap = () => {
                     </ul>
                   </div>
                 </div>
-                
                 <div className="md:w-5/12 hidden md:block"></div>
               </Motion.div>
             ))}

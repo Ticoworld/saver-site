@@ -5,7 +5,7 @@ const Loader = ({ onLoadComplete }) => {
   const [currentMessage, setCurrentMessage] = useState(0);
   
   const messages = [
-    "SAVER on SOL is getting ready...",
+    "SAVER on BSC is getting ready...",
     "Warming up the Dino signal...",
     "Loading community vibes...",
     "Almost there — welcome to $SOS"
@@ -43,28 +43,28 @@ const Loader = ({ onLoadComplete }) => {
       </div>
 
       <div className="relative flex flex-col items-center">
-        {/* Central Loader - Saver Signal Pulse with Solana gradients */}
+  {/* Central Loader - Saver Signal Pulse with BSC gradients */}
         <div className="relative mb-8">
           {/* Animated SVG waves */}
           <svg width="180" height="180" viewBox="0 0 180 180" fill="none" className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-0" style={{ pointerEvents: 'none' }}>
-            <circle cx="90" cy="90" r="70" stroke="url(#solana1)" strokeWidth="3" opacity="0.18">
+            <circle cx="90" cy="90" r="70" stroke="url(#bsc1)" strokeWidth="3" opacity="0.18">
               <animate attributeName="r" values="70;85;70" dur="2.2s" repeatCount="indefinite" />
               <animate attributeName="opacity" values="0.18;0.05;0.18" dur="2.2s" repeatCount="indefinite" />
             </circle>
-            <circle cx="90" cy="90" r="50" stroke="url(#solana2)" strokeWidth="4" opacity="0.25">
+            <circle cx="90" cy="90" r="50" stroke="url(#bsc2)" strokeWidth="4" opacity="0.25">
               <animate attributeName="r" values="50;65;50" dur="1.6s" repeatCount="indefinite" />
               <animate attributeName="opacity" values="0.25;0.08;0.25" dur="1.6s" repeatCount="indefinite" />
             </circle>
             <defs>
-              <linearGradient id="solana1" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#9945FF" />
-                <stop offset="0.5" stopColor="#F15BB5" />
-                <stop offset="1" stopColor="#14F195" />
+              <linearGradient id="bsc1" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#F0B90B" />
+                <stop offset="0.5" stopColor="#10B981" />
+                <stop offset="1" stopColor="#0B5E55" />
               </linearGradient>
-              <linearGradient id="solana2" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#14F195" />
-                <stop offset="0.5" stopColor="#9945FF" />
-                <stop offset="1" stopColor="#F15BB5" />
+              <linearGradient id="bsc2" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#0B5E55" />
+                <stop offset="0.5" stopColor="#10B981" />
+                <stop offset="1" stopColor="#F0B90B" />
               </linearGradient>
             </defs>
           </svg>
@@ -84,7 +84,7 @@ const Loader = ({ onLoadComplete }) => {
         {/* Progress bar */}
         <div className="w-64 h-1 bg-neutral-200 rounded-full overflow-hidden mb-6">
           <div
-            className="h-full bg-gradient-to-r from-[#9945FF] via-[#F15BB5] to-[#14F195] rounded-full transition-all duration-300 ease-out"
+            className="h-full bg-gradient-to-r from-[#F0B90B] via-[#10B981] to-[#0B5E55] rounded-full transition-all duration-300 ease-out"
             style={{ width: `${Math.min(loadingProgress, 100)}%` }}
           ></div>
         </div>

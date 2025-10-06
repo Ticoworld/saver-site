@@ -11,10 +11,10 @@
   --saver-dark: #065f46;  /* emerald-800 */
   --saver-light: #d1fae5; /* emerald-100 */
   
-  /* Solana Accent Colors */
-  --solana-purple: #9945FF;
-  --solana-teal: #14F195;
-  --solana-pink: #F15BB5;
+  /* BSC Accent Colors */
+  --bsc-gold: #F0B90B;
+  --bsc-emerald: #10B981;
+  --bsc-forest: #0B5E55;
   
   /* Dynamic Neutrals */
   --neutral-900: #111827;
@@ -98,15 +98,15 @@
     background-color: color-mix(in srgb, var(--saver-dark) 30%, transparent);
   }
 
-  /* Solana gradients */
-  .solana-text-gradient {
-    background-image: linear-gradient(90deg, var(--solana-purple), var(--solana-pink), var(--solana-teal));
+  /* BSC gradients */
+  .bsc-text-gradient {
+    background-image: linear-gradient(90deg, #F0B90B, #10B981, #0B5E55);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
-  .solana-bg-gradient {
-    background-image: linear-gradient(120deg, color-mix(in srgb, var(--solana-purple) 60%, #000), color-mix(in srgb, var(--solana-pink) 60%, #000), color-mix(in srgb, var(--solana-teal) 60%, #000));
+  .bsc-bg-gradient {
+    background-image: linear-gradient(120deg, color-mix(in srgb, #F0B90B 60%, #000), color-mix(in srgb, #10B981 60%, #000), color-mix(in srgb, #0B5E55 60%, #000));
   }
 
   /* Performance-optimized hover effects */

@@ -16,7 +16,7 @@ const Hero = () => {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut", delay: 0.2 } }
   };
-  const solanaVariants = {
+  const bscVariants = {
     hidden: { opacity: 0, x: 80 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut", delay: 0.4 } }
   };
@@ -135,13 +135,13 @@ const Hero = () => {
             >
               ON{' '}
               <Motion.span
-                variants={solanaVariants}
+                variants={bscVariants}
                 initial="hidden"
                 animate="visible"
-                className="solana-text-gradient bg-clip-text text-transparent hover:scale-105 inline-block transition-transform duration-300"
+                className="bsc-text-gradient bg-clip-text text-transparent hover:scale-105 inline-block transition-transform duration-300"
                 whileHover={{ rotateY: 10 }}
               >
-                SOLANA
+                BSC
               </Motion.span>
             </Motion.span>
           </Motion.h1>
@@ -170,16 +170,8 @@ const Hero = () => {
                 transition={{ delay: 1.6, duration: 0.8 }}
                 className="text-emerald-400 font-medium"
               >
-                community-driven growth
+                community-driven growth on BSC
               </Motion.span>
-            </Motion.p>
-      <Motion.p 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2, duration: 0.8 }}
-                className="text-lg text-emerald-400 font-medium"
-            >
-        Get rewards when you hold $SOS
             </Motion.p>
           </Motion.div>
 
@@ -190,9 +182,9 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 2.4, ease: "easeOut" }}
             className="flex flex-col sm:flex-row gap-6 justify-center mb-20"
           >
-            {SOS.links.solscan ? (
+            {SOS.links.bscscan ? (
               <Motion.a
-                href={SOS.links.solscan}
+                href={SOS.links.bscscan}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ 
@@ -254,7 +246,7 @@ const Hero = () => {
               <div className="w-16 h-1 bg-emerald-400 mx-auto mb-6"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 gap-y-3 mb-8">
-              {/* Pump.fun removed for rev share launch */}
+              {/* Pump.fun CTA intentionally omitted for BSC launch */}
               
               {/* Dexscreener */}
               {SOS.links.dexscreener && (
@@ -297,8 +289,8 @@ const Hero = () => {
           >
             {[ 
               { value: "1B", label: "Total Supply" },
-              { value: "6%", label: "Transfer Tax" },
-              { value: "100%", label: "Community Owned" }
+              { value: "0%", label: "Trading Tax" },
+              { value: "BSC", label: "Network" }
             ].map((stat, index) => (
               <Motion.div
                 key={stat.label}

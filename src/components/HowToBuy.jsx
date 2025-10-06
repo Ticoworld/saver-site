@@ -7,28 +7,29 @@ import {
   LinkIcon 
 } from '@heroicons/react/24/outline';
 import SOS from '../config/sos';
+import CopyAddress from './CopyAddress';
 
 const HowToBuy = () => {
   const steps = [
     {
       icon: WalletIcon,
       title: 'Set Up Wallet',
-      description: 'Install Phantom or Solflare and create a Solana wallet.'
+      description: 'Install MetaMask or Trust Wallet and enable the BSC network.'
     },
     {
       icon: MagnifyingGlassIcon,
-      title: 'Get SOL',
-      description: 'Buy SOL on an exchange and send it to your Solana wallet.'
+      title: 'Fund with BNB',
+      description: 'Buy BNB on an exchange and send it to your BSC wallet.'
     },
     {
       icon: ArrowsRightLeftIcon,
-      title: 'Revenue Share Launch',
-      description: 'Launch with community revenue share. Join and earn rewards.'
+      title: 'Connect to a DEX',
+      description: 'Choose PancakeSwap or your preferred BSC DEX for swapping.'
     },
     {
       icon: LinkIcon,
       title: 'Swap for $SOS',
-      description: 'After launch, swap SOL for $SOS via Jupiter or your preferred DEX.'
+      description: 'Paste the contract address and trade BNB for $SOS.'
     }
   ];
 
@@ -79,7 +80,37 @@ const HowToBuy = () => {
         </div>
         
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {/* Pump.fun launch section removed for rev share launch */}
+          <Motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-2xl p-8 text-center text-white shadow-xl"
+          >
+            <h3 className="text-2xl font-bold mb-4">Contract Address</h3>
+            <p className="mb-6 text-emerald-100 leading-relaxed">
+              Use this CA on BSC when adding liquidity or swapping for $SOS.
+            </p>
+            <div className="max-w-xl mx-auto">
+              {SOS.contractAddress ? (
+                <CopyAddress address={SOS.contractAddress} />
+              ) : (
+                <div className="bg-white/10 border border-white/20 rounded-xl p-4 text-sm">
+                  Contract address will be shared soon.
+                </div>
+              )}
+            </div>
+            {SOS.links.bscscan && (
+              <a 
+                href={SOS.links.bscscan}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block mt-6 bg-white text-emerald-700 px-8 py-3 rounded-xl font-bold shadow-lg hover:bg-neutral-100 transition-colors"
+              >
+                View on BscScan
+              </a>
+            )}
+          </Motion.div>
 
           <Motion.div
             initial={{ opacity: 0, scale: 0.95 }}

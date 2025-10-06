@@ -5,18 +5,18 @@ import SOS from '../config/sos';
 
 const Tokenomics = () => {
   const tokenDetails = [
-    { title: 'Token Name', value: 'SAVER ON SOL' },
+    { title: 'Token Name', value: 'SAVER ON BSC' },
     { title: 'Ticker', value: '$SOS' },
     { title: 'Total Supply', value: SOS.supply },
-    { title: 'Blockchain', value: 'Solana' },
+    { title: 'Blockchain', value: 'BNB Smart Chain (BSC)' },
   ];
 
   const features = [
-    'Phase 1: Revenue Share – trading fees are distributed to holders and devs',
-    '100% of tokens enter the liquidity pool at launch',
-    '6% Transfer Tax supporting rewards and development',
-    'No Dev Wallets – team only owns what they buy',
-    'Transparent, community-driven usage of treasury',
+    'Phase 1: Simple community launch focused on liquidity',
+    '0% trading tax – clean swaps in and out',
+    'No reflections or automated reward mechanics',
+    'No team wallets — everyone plays by the same rules',
+    'Transparent treasury guidance with community input',
   ];
 
   return (
@@ -35,7 +35,7 @@ const Tokenomics = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Token <span className="text-saver-dark">omics</span></h2>
           <div className="w-20 h-1 bg-saver-dark mx-auto mb-6"></div>
           <p className="text-lg max-w-3xl mx-auto">
-            Get rewards when you hold $SOS. A transparent project designed for long-term growth and stability.
+            Built for BSC believers. A clean token structure with no tax, no automatic rewards, and a focus on community strength.
           </p>
   </Motion.div>
 
@@ -67,12 +67,6 @@ const Tokenomics = () => {
                   <div className="text-sm text-gray-600 bg-gray-50 border border-gray-200 rounded-lg p-3">Contract address will be shared after launch.</div>
                 )}
               </div>
-              {SOS.distributorAddress && (
-                <div>
-                  <h4 className="font-semibold mb-2">Distributor Address</h4>
-                  <CopyAddress address={SOS.distributorAddress} />
-                </div>
-              )}
             </div>
           </Motion.div>
 
@@ -83,51 +77,25 @@ const Tokenomics = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="bg-saver-dark text-white rounded-2xl shadow-xl p-6 sm:p-8 overflow-hidden"
           >
-            <h3 className="text-2xl font-bold mb-6">Transparent Tokenomics</h3>
+            <h3 className="text-2xl font-bold mb-6">BSC Token Setup</h3>
 
-            {/* Quick metrics row (matches tokenomics image) */}
+            {/* Core facts */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6 text-center">
-              <div className="bg-white/10 rounded-xl p-4">
-                <div className="text-sm text-white/80">Transfer Tax</div>
-                <div className="text-2xl font-bold">6%</div>
-              </div>
-              <div className="bg-white/10 rounded-xl p-4">
-                <div className="text-sm text-white/80">Developer Rewards</div>
-                <div className="text-2xl font-bold">1%</div>
-              </div>
-              <div className="bg-white/10 rounded-xl p-4">
-                <div className="text-sm text-white/80">Holder Rewards</div>
-                <div className="text-2xl font-bold">99%</div>
-              </div>
-              <div className="bg-white/10 rounded-xl p-4">
-                <div className="text-sm text-white/80">Burn Rate</div>
-                <div className="text-2xl font-bold">0%</div>
-              </div>
+              {[ 
+                { value: '0%', label: 'Trading Tax' },
+                { value: '0%', label: 'Reflections' },
+                { value: '1B', label: 'Total Supply' },
+                { value: 'BSC', label: 'Network' }
+              ].map((item) => (
+                <div key={item.label} className="bg-white/10 rounded-xl p-4">
+                  <div className="text-sm text-white/80">{item.label}</div>
+                  <div className="text-2xl font-bold">{item.value}</div>
+                </div>
+              ))}
             </div>
 
-            {/* Token configuration box */}
-            <div className="bg-black/10 rounded-xl p-4 border border-white/10 space-y-2">
-              <div className="flex items-center justify-between text-sm">
-                <span className="text-white/80">Total Tax Rate</span>
-                <span className="font-semibold">6%</span>
-              </div>
-              <div className="flex items-center justify-between text-sm">
-                <span className="text-white/80">Platform Fee</span>
-                <span className="font-semibold">2%</span>
-              </div>
-              <div className="flex items-center justify-between text-sm">
-                <span className="text-white/80">Dev Share</span>
-                <span className="font-semibold">1%</span>
-              </div>
-              <div className="flex items-center justify-between text-sm">
-                <span className="text-white/80">Holder Share</span>
-                <span className="font-semibold">99%</span>
-              </div>
-              <div className="flex items-center justify-between text-sm">
-                <span className="text-white/80">Min Holding</span>
-                <span className="font-semibold">100,000 SOS</span>
-              </div>
-              <div className="text-xs text-white/60 pt-2">Note: Dev and Holder shares are calculated from remaining amount after platform fee is deducted.</div>
+            <div className="bg-black/10 rounded-xl p-4 border border-white/10 text-sm text-white/80 mb-6">
+              No hidden fees, no automatic reward splits — just straightforward trading on BSC.
             </div>
 
             <ul className="space-y-4 text-sm sm:text-base">

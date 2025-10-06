@@ -49,7 +49,7 @@ const Community = () => {
     {
       icon: GlobeAltIcon,
       title: 'Global Reach',
-      description: 'Building connections across the Solana community'
+      description: 'Building connections across the BSC community'
     }
   ];
 
@@ -137,7 +137,7 @@ const Community = () => {
             className="text-xl md:text-2xl max-w-4xl mx-auto text-neutral-600 leading-relaxed"
           >
             Join a welcoming community of builders, creators, and friends 
-            who are growing together on Solana.
+            who are growing together on BSC.
           </Motion.p>
         </Motion.div>
 
